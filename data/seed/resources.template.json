@@ -1,0 +1,140 @@
+{
+  "resources": [
+    {
+      "id": "res-1",
+      "title": "Designing Data-Intensive Applications",
+      "url": "https://dataintensive.net/",
+      "type": "book",
+      "description": "The bible for data engineers. Covers distributed systems, databases, and data processing fundamentals.",
+      "tags": ["distributed-systems", "databases", "must-read"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-2",
+      "title": "The Data Warehouse Toolkit",
+      "url": "https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/books/",
+      "type": "book",
+      "description": "The definitive guide to dimensional modeling by Ralph Kimball.",
+      "tags": ["data-warehouse", "dimensional-modeling", "kimball"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-3",
+      "title": "Fundamentals of Data Engineering",
+      "url": "https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/",
+      "type": "book",
+      "description": "Comprehensive overview of the data engineering landscape by Joe Reis and Matt Housley.",
+      "tags": ["beginner-friendly", "overview", "modern"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-4",
+      "title": "DataTalks.Club Data Engineering Zoomcamp",
+      "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
+      "type": "course",
+      "description": "Free, comprehensive data engineering course with hands-on projects.",
+      "tags": ["free", "hands-on", "comprehensive"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-5",
+      "title": "dbt Learn",
+      "url": "https://courses.getdbt.com/",
+      "type": "course",
+      "description": "Official dbt courses for learning the data build tool.",
+      "tags": ["dbt", "free", "official"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-6",
+      "title": "Apache Airflow Documentation",
+      "url": "https://airflow.apache.org/docs/",
+      "type": "documentation",
+      "description": "Official documentation for Apache Airflow.",
+      "tags": ["airflow", "orchestration", "official"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-7",
+      "title": "Apache Spark Documentation",
+      "url": "https://spark.apache.org/docs/latest/",
+      "type": "documentation",
+      "description": "Official documentation for Apache Spark.",
+      "tags": ["spark", "big-data", "official"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-8",
+      "title": "Confluent Kafka Documentation",
+      "url": "https://docs.confluent.io/",
+      "type": "documentation",
+      "description": "Comprehensive Kafka documentation and tutorials.",
+      "tags": ["kafka", "streaming", "confluent"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-9",
+      "title": "DataTalks.Club Slack",
+      "url": "https://datatalks.club/slack.html",
+      "type": "community",
+      "description": "Active community for data professionals with channels for DE, ML, and more.",
+      "tags": ["slack", "networking", "active"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-10",
+      "title": "r/dataengineering",
+      "url": "https://www.reddit.com/r/dataengineering/",
+      "type": "community",
+      "description": "Reddit community for data engineering discussions.",
+      "tags": ["reddit", "discussions", "career"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-11",
+      "title": "AWS Certified Data Engineer - Associate",
+      "url": "https://aws.amazon.com/certification/certified-data-engineer-associate/",
+      "type": "certification",
+      "description": "AWS certification for data engineering skills.",
+      "tags": ["aws", "cloud", "certification"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-12",
+      "title": "Google Professional Data Engineer",
+      "url": "https://cloud.google.com/certification/data-engineer",
+      "type": "certification",
+      "description": "GCP certification for data engineering.",
+      "tags": ["gcp", "cloud", "certification"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-13",
+      "title": "Databricks Certified Data Engineer",
+      "url": "https://www.databricks.com/learn/certification/data-engineer-associate",
+      "type": "certification",
+      "description": "Databricks certification for Spark and lakehouse concepts.",
+      "tags": ["databricks", "spark", "certification"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-14",
+      "title": "Mode SQL Tutorial",
+      "url": "https://mode.com/sql-tutorial/",
+      "type": "tool",
+      "description": "Excellent free SQL tutorial from basics to advanced.",
+      "tags": ["sql", "free", "beginner-friendly"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-15",
+      "title": "Great Expectations Documentation",
+      "url": "https://docs.greatexpectations.io/",
+      "type": "tool",
+      "description": "Documentation for the Great Expectations data quality framework.",
+      "tags": ["data-quality", "testing", "python"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    }
+  ],
+  "lastUpdated": "2024-01-01T00:00:00.000Z"
+}

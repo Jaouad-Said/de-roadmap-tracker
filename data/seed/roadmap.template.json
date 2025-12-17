@@ -1,0 +1,304 @@
+{
+  "phases": [
+    {
+      "id": "phase-1",
+      "title": "Core Data Engineering Foundations",
+      "duration": "2-3 months",
+      "description": "Master the fundamental skills every data engineer needs. This phase builds your core toolkit for handling data at any scale.",
+      "order": 1,
+      "sections": [
+        {
+          "id": "sql-data-modeling",
+          "title": "SQL & Data Modeling",
+          "topics": [
+            "Master SQL deeply (window functions, CTEs, performance)",
+            "Dimensional modeling (star schema, snowflake)",
+            "Data vault basics",
+            "Database normalization vs denormalization",
+            "Index optimization"
+          ],
+          "why": "This is your daily language. Every data engineer writes SQL constantly. Understanding data modeling separates good engineers from great ones - you'll design schemas that make analysts love you and queries that actually perform.",
+          "how": "Build a small analytics database for a fictional e-commerce company. Create fact and dimension tables, write complex reporting queries, and optimize them. Use PostgreSQL or MySQL locally.",
+          "order": 1
+        },
+        {
+          "id": "python-programming",
+          "title": "Python for Data Engineering",
+          "topics": [
+            "Python fundamentals (data structures, OOP)",
+            "Pandas & NumPy for data manipulation",
+            "File handling (CSV, JSON, Parquet)",
+            "API interactions (requests, authentication)",
+            "Error handling and logging",
+            "Virtual environments and dependency management"
+          ],
+          "why": "Python is the glue language of data engineering. You'll use it for ETL scripts, API integrations, data quality checks, and automation. It's everywhere in the data stack.",
+          "how": "Build an ETL pipeline that pulls data from a public API (like GitHub or weather API), transforms it with Pandas, handles errors gracefully, and saves to multiple formats.",
+          "order": 2
+        },
+        {
+          "id": "linux-cli-git",
+          "title": "Linux, CLI & Git",
+          "topics": [
+            "Linux command line essentials",
+            "Bash scripting basics",
+            "Git workflow (branching, merging, PRs)",
+            "SSH and remote server management",
+            "Cron jobs and scheduling",
+            "Environment variables and configuration"
+          ],
+          "why": "Most data infrastructure runs on Linux. You'll SSH into servers, debug pipelines via command line, and collaborate through Git. These skills make you efficient and self-sufficient.",
+          "how": "Set up a Linux VM or use WSL. Write bash scripts that automate daily tasks. Create a Git workflow for your projects with proper branching strategy.",
+          "order": 3
+        },
+        {
+          "id": "cloud-fundamentals",
+          "title": "Cloud Fundamentals (AWS/GCP/Azure)",
+          "topics": [
+            "Core services (compute, storage, networking)",
+            "S3/GCS/Blob storage deep dive",
+            "IAM and security basics",
+            "CLI tools for cloud providers",
+            "Cost management basics",
+            "Serverless basics (Lambda/Cloud Functions)"
+          ],
+          "why": "Modern data engineering lives in the cloud. Understanding cloud services is non-negotiable - you'll provision infrastructure, manage data lakes, and deploy pipelines on cloud platforms.",
+          "how": "Pick one cloud (AWS recommended for jobs). Get free tier, build a data lake with S3, set up IAM roles properly, and deploy a Lambda function that processes files.",
+          "order": 4
+        }
+      ]
+    },
+    {
+      "id": "phase-2",
+      "title": "Pipeline & Orchestration",
+      "duration": "2-3 months",
+      "description": "Learn to build production-ready data pipelines that run reliably at scale. This is where you become a 'real' data engineer.",
+      "order": 2,
+      "sections": [
+        {
+          "id": "workflow-orchestration",
+          "title": "Workflow Orchestration",
+          "topics": [
+            "Apache Airflow fundamentals",
+            "DAGs, operators, and hooks",
+            "Task dependencies and sensors",
+            "Airflow best practices",
+            "Alternative: Prefect or Dagster basics",
+            "Monitoring and alerting"
+          ],
+          "why": "Orchestration is how you make pipelines run automatically, handle failures, and maintain dependencies. Airflow is the industry standard and appears in almost every job description.",
+          "how": "Install Airflow locally with Docker. Build a DAG that orchestrates your ETL pipeline from Phase 1. Add error handling, retries, and email alerts.",
+          "order": 1
+        },
+        {
+          "id": "batch-processing",
+          "title": "Batch Data Processing",
+          "topics": [
+            "Apache Spark fundamentals",
+            "PySpark for data transformations",
+            "Spark SQL and DataFrames",
+            "Partitioning and optimization",
+            "Spark on cloud (EMR, Dataproc)",
+            "Delta Lake basics"
+          ],
+          "why": "When datasets get big, single-machine Python won't cut it. Spark lets you process terabytes of data efficiently. It's essential for any company with serious data volumes.",
+          "how": "Set up Spark locally or on cloud. Rewrite your previous ETL to use PySpark. Process a large public dataset (NYC taxi data is great) and compare performance.",
+          "order": 2
+        },
+        {
+          "id": "data-warehousing",
+          "title": "Data Warehousing",
+          "topics": [
+            "Data warehouse concepts and architecture",
+            "Snowflake, BigQuery, or Redshift",
+            "ELT vs ETL patterns",
+            "dbt (data build tool) fundamentals",
+            "Data warehouse optimization",
+            "Slowly changing dimensions"
+          ],
+          "why": "Data warehouses are where your transformed data lives for analytics. dbt has revolutionized how we think about transformations. These skills are in extremely high demand.",
+          "how": "Get a free Snowflake or BigQuery account. Load data, build dbt models with proper testing and documentation. Create a star schema for analytics.",
+          "order": 3
+        },
+        {
+          "id": "data-quality",
+          "title": "Data Quality & Testing",
+          "topics": [
+            "Data quality dimensions (accuracy, completeness, etc.)",
+            "Great Expectations framework",
+            "dbt tests",
+            "Data contracts",
+            "Monitoring data pipelines",
+            "Anomaly detection basics"
+          ],
+          "why": "Bad data costs companies millions. Data quality is increasingly important and is a key differentiator for senior engineers. Quality-first mindset will set you apart.",
+          "how": "Add Great Expectations to your pipeline. Define expectations for your data, build a validation suite, and integrate it into your Airflow DAG.",
+          "order": 4
+        }
+      ]
+    },
+    {
+      "id": "phase-3",
+      "title": "Streaming & Real-time",
+      "duration": "1-2 months",
+      "description": "Add real-time capabilities to your skill set. Many companies need both batch and streaming, making this a valuable differentiator.",
+      "order": 3,
+      "sections": [
+        {
+          "id": "kafka-fundamentals",
+          "title": "Apache Kafka Fundamentals",
+          "topics": [
+            "Event streaming concepts",
+            "Kafka architecture (brokers, topics, partitions)",
+            "Producers and consumers",
+            "Kafka Connect",
+            "Schema Registry and Avro",
+            "Kafka Streams basics"
+          ],
+          "why": "Kafka is the backbone of real-time data architectures. Understanding event streaming opens up a whole new world of use cases - real-time analytics, event-driven systems, CDC.",
+          "how": "Run Kafka locally with Docker. Build a producer that generates events, consume them with Python, and build a simple streaming pipeline.",
+          "order": 1
+        },
+        {
+          "id": "stream-processing",
+          "title": "Stream Processing",
+          "topics": [
+            "Stream processing patterns",
+            "Apache Flink basics",
+            "Spark Structured Streaming",
+            "Windowing and watermarks",
+            "Exactly-once semantics",
+            "Real-time vs near-real-time"
+          ],
+          "why": "Stream processing lets you react to data in real-time. From fraud detection to live dashboards, these skills command premium salaries.",
+          "how": "Build a real-time analytics dashboard. Use Kafka for ingestion and Spark Streaming or Flink for processing. Aggregate metrics in tumbling windows.",
+          "order": 2
+        },
+        {
+          "id": "cdc-patterns",
+          "title": "Change Data Capture (CDC)",
+          "topics": [
+            "CDC concepts and patterns",
+            "Debezium for CDC",
+            "Log-based replication",
+            "CDC to data warehouse",
+            "Handling schema changes",
+            "CDC vs batch extraction"
+          ],
+          "why": "CDC enables real-time data replication without impacting source systems. It's how modern companies keep data warehouses in sync with production databases.",
+          "how": "Set up Debezium to capture changes from a PostgreSQL database. Stream changes through Kafka to a target database or data warehouse.",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "phase-4",
+      "title": "ML Engineering Basics",
+      "duration": "1-2 months",
+      "description": "Understand the data science workflow and how to support ML systems in production. You don't need to build models, but you need to enable those who do.",
+      "order": 4,
+      "sections": [
+        {
+          "id": "ml-fundamentals",
+          "title": "ML Fundamentals for Data Engineers",
+          "topics": [
+            "ML workflow overview",
+            "Feature engineering basics",
+            "Model training and evaluation",
+            "Data requirements for ML",
+            "Common ML pitfalls (data leakage, etc.)",
+            "Working with data scientists"
+          ],
+          "why": "Data engineers are increasingly asked to support ML workflows. Understanding the basics helps you build better pipelines for ML use cases and collaborate effectively.",
+          "how": "Build a simple ML project end-to-end. Focus on data preparation, feature engineering, and understanding what data scientists need from you.",
+          "order": 1
+        },
+        {
+          "id": "feature-stores",
+          "title": "Feature Stores & ML Infrastructure",
+          "topics": [
+            "Feature store concepts",
+            "Feast framework basics",
+            "Online vs offline features",
+            "Feature pipelines",
+            "Model serving basics",
+            "MLflow for experiment tracking"
+          ],
+          "why": "Feature stores are becoming standard ML infrastructure. Data engineers often own this layer, making it a valuable skill for roles at ML-heavy companies.",
+          "how": "Set up Feast locally. Build a feature pipeline that computes features from raw data and serves them for both training and inference.",
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": "phase-5",
+      "title": "Scale & Production Excellence",
+      "duration": "Ongoing",
+      "description": "Level up to senior engineer territory. Focus on building reliable, scalable systems and leading technical decisions.",
+      "order": 5,
+      "sections": [
+        {
+          "id": "infrastructure-as-code",
+          "title": "Infrastructure as Code",
+          "topics": [
+            "Terraform fundamentals",
+            "Managing cloud infrastructure",
+            "CI/CD for infrastructure",
+            "Docker and containerization",
+            "Kubernetes basics",
+            "GitOps practices"
+          ],
+          "why": "Senior data engineers don't click around in consoles - they codify infrastructure. IaC is essential for reliable, reproducible, and scalable data platforms.",
+          "how": "Rewrite your cloud setup using Terraform. Containerize your pipelines with Docker. Set up a CI/CD pipeline that deploys infrastructure changes.",
+          "order": 1
+        },
+        {
+          "id": "data-platform-design",
+          "title": "Data Platform Design",
+          "topics": [
+            "Data mesh concepts",
+            "Data lakehouse architecture",
+            "Metadata management",
+            "Data catalog (DataHub, Amundsen)",
+            "Cost optimization at scale",
+            "Multi-tenant architectures"
+          ],
+          "why": "Understanding architecture patterns helps you make better decisions and have meaningful input on platform design. This is senior/staff engineer territory.",
+          "how": "Design a data platform for a fictional company. Document architecture decisions, create diagrams, and think through scalability and cost implications.",
+          "order": 2
+        },
+        {
+          "id": "reliability-observability",
+          "title": "Reliability & Observability",
+          "topics": [
+            "SLIs, SLOs, and SLAs for data",
+            "Pipeline monitoring and alerting",
+            "Logging best practices",
+            "Data lineage tracking",
+            "Incident management",
+            "Chaos engineering for data"
+          ],
+          "why": "Production systems fail. How you handle failures, monitor systems, and maintain reliability separates good engineers from great ones.",
+          "how": "Add comprehensive monitoring to your pipelines. Set up dashboards, alerts, and runbooks. Practice incident response scenarios.",
+          "order": 3
+        },
+        {
+          "id": "leadership-communication",
+          "title": "Technical Leadership & Communication",
+          "topics": [
+            "Writing technical RFCs",
+            "Presenting to stakeholders",
+            "Mentoring junior engineers",
+            "Cross-functional collaboration",
+            "Trade-off analysis",
+            "Building team culture"
+          ],
+          "why": "Senior roles require more than technical skills. You need to influence decisions, communicate complex ideas clearly, and help others grow.",
+          "how": "Write an RFC for a project you're working on. Practice explaining technical concepts to non-technical stakeholders. Mentor someone junior.",
+          "order": 4
+        }
+      ]
+    }
+  ],
+  "lastUpdated": "2024-01-01T00:00:00.000Z"
+}
