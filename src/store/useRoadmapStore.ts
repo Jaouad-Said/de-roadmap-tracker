@@ -962,9 +962,9 @@ export const useRoadmapStore = create<RoadmapStore>((set, get) => ({
         phaseSections.push({
           sectionId: section.id,
           sectionTitle: section.title,
-          topics: (section.topics || []).map(t => ({
-            topicId: t.id,
-            topicTitle: t.title,
+          topics: (section.topics || []).map((t, index) => ({
+            topicId: typeof t === 'string' ? `topic-${section.id}-${index}` : t.id,
+            topicTitle: typeof t === 'string' ? t : t.title,
           })),
         });
       });

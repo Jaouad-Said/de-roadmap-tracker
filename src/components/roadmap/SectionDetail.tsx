@@ -31,12 +31,16 @@ interface SectionDetailProps {
 }
 
 export default function SectionDetail({ phase, section: initialSection }: SectionDetailProps) {
-  const { progress, updateSection, getSection } = useRoadmapStore();
+  const { roadmap, progress, updateSection } = useRoadmapStore();
   const { editMode, showToast } = useUIStore();
-  const [section, setSection] = useState(initialSection);
   const [isEditingWhy, setIsEditingWhy] = useState(false);
   const [isEditingHow, setIsEditingHow] = useState(false);
   const [isEditingTitle, setIsEditingTitle] = useState(false);
+  
+  // Get section directly from store for real-time updates
+  const currentPhase = roadmap?.phases.find(p => p.id === phase.id);
+  const section = currentPhase?.sections.find(s => s.id === initialSection.id) || initialSection;
+  
   const [editedWhy, setEditedWhy] = useState(section.why);
   const [editedHow, setEditedHow] = useState(section.how);
   const [editedTitle, setEditedTitle] = useState(section.title);
@@ -44,29 +48,12 @@ export default function SectionDetail({ phase, section: initialSection }: Sectio
   const sectionProgress = progress?.sections[section.id];
   const status = sectionProgress?.status || 'not-started';
 
-  // Fetch section data on mount to get migrated data
+  // Sync edited values when section changes from store
   useEffect(() => {
-    const fetchSection = async () => {
-      try {
-        const res = await fetch(`/api/roadmap/${phase.id}/sections/${section.id}`);
-        const data = await res.json();
-        if (data.success && data.data) {
-          setSection(data.data);
-        }
-      } catch (error) {
-        console.error('Failed to fetch section:', error);
-      }
-    };
-    fetchSection();
-  }, [phase.id, section.id]);
-
-  // Update local section when store changes
-  useEffect(() => {
-    const storeSection = getSection(phase.id, section.id);
-    if (storeSection) {
-      setSection(storeSection);
-    }
-  }, [getSection, phase.id, section.id]);
+    setEditedWhy(section.why);
+    setEditedHow(section.how);
+    setEditedTitle(section.title);
+  }, [section.why, section.how, section.title]);
 
   const handleSaveWhy = async () => {
     await updateSection(phase.id, section.id, { why: editedWhy });

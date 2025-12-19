@@ -25,6 +25,7 @@ import ProjectCard from '@/components/projects/ProjectCard';
 import ProjectEditor from '@/components/projects/ProjectEditor';
 
 const statusColors = {
+  'not-started': 'bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300',
   'planning': 'bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300',
   'in-progress': 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400',
   'completed': 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400',
@@ -32,6 +33,7 @@ const statusColors = {
 };
 
 const statusLabels = {
+  'not-started': 'Not Started',
   'planning': 'Planning',
   'in-progress': 'In Progress',
   'completed': 'Completed',
@@ -63,6 +65,7 @@ export default function ProjectsPage() {
 
   const projectsByStatus = useMemo(() => {
     const grouped = {
+      'not-started': [] as Project[],
       'in-progress': [] as Project[],
       'planning': [] as Project[],
       'on-hold': [] as Project[],
@@ -70,7 +73,9 @@ export default function ProjectsPage() {
     };
     
     filteredProjects.forEach(project => {
-      grouped[project.status].push(project);
+      if (grouped[project.status]) {
+        grouped[project.status].push(project);
+      }
     });
     
     return grouped;
@@ -147,6 +152,7 @@ export default function ProjectsPage() {
           className="px-4 py-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
         >
           <option value="all">All Status</option>
+          <option value="not-started">Not Started</option>
           <option value="planning">Planning</option>
           <option value="in-progress">In Progress</option>
           <option value="completed">Completed</option>
@@ -178,6 +184,25 @@ export default function ProjectsPage() {
         </div>
       ) : (
         <div className="space-y-6">
+          {/* Not Started */}
+          {projectsByStatus['not-started'].length > 0 && (
+            <div>
+              <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                <span className="w-3 h-3 bg-slate-400 rounded-full" />
+                Not Started ({projectsByStatus['not-started'].length})
+              </h2>
+              <div className="grid gap-4 md:grid-cols-2">
+                {projectsByStatus['not-started'].map(project => (
+                  <ProjectCard
+                    key={project.id}
+                    project={project}
+                    onEdit={() => setEditingProject(project)}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* In Progress */}
           {projectsByStatus['in-progress'].length > 0 && (
             <div>

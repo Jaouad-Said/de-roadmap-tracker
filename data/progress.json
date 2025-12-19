@@ -1,4 +1,12 @@
 {
-  "sections": {},
-  "lastUpdated": "2024-01-01T00:00:00.000Z"
+  "sections": {
+    "sql-data-modeling": {
+      "status": "not-started",
+      "progress": 0,
+      "startDate": null,
+      "completedDate": null,
+      "lastUpdated": "2025-12-19T08:31:03.465Z"
+    }
+  },
+  "lastUpdated": "2025-12-19T08:31:03.465Z"
 }

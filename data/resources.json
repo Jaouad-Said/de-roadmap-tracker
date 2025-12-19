@@ -5,17 +5,17 @@
       "title": "Designing Data-Intensive Applications",
       "url": "https://dataintensive.net/",
       "type": "book",
-      "description": "The bible for data engineers. Covers distributed systems, databases, and data processing fundamentals.",
-      "tags": ["distributed-systems", "databases", "must-read"],
+      "description": "The bible for data engineers. Covers distributed systems, databases, and data processing fundamentals. A must-read that will change how you think about data systems.",
+      "tags": ["distributed-systems", "databases", "must-read", "architecture"],
       "createdAt": "2024-01-01T00:00:00.000Z"
     },
     {
       "id": "res-2",
-      "title": "The Data Warehouse Toolkit",
+      "title": "The Data Warehouse Toolkit (3rd Edition)",
       "url": "https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/books/",
       "type": "book",
-      "description": "The definitive guide to dimensional modeling by Ralph Kimball.",
-      "tags": ["data-warehouse", "dimensional-modeling", "kimball"],
+      "description": "The definitive guide to dimensional modeling by Ralph Kimball. Essential for understanding star schemas, fact tables, and dimension design patterns.",
+      "tags": ["data-warehouse", "dimensional-modeling", "kimball", "must-read"],
       "createdAt": "2024-01-01T00:00:00.000Z"
     },
     {
@@ -23,118 +23,343 @@
       "title": "Fundamentals of Data Engineering",
       "url": "https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/",
       "type": "book",
-      "description": "Comprehensive overview of the data engineering landscape by Joe Reis and Matt Housley.",
-      "tags": ["beginner-friendly", "overview", "modern"],
+      "description": "Comprehensive overview of the modern data engineering landscape by Joe Reis and Matt Housley. Great starting point for understanding the field.",
+      "tags": ["beginner-friendly", "overview", "modern", "2022"],
       "createdAt": "2024-01-01T00:00:00.000Z"
     },
     {
       "id": "res-4",
-      "title": "DataTalks.Club Data Engineering Zoomcamp",
-      "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
-      "type": "course",
-      "description": "Free, comprehensive data engineering course with hands-on projects.",
-      "tags": ["free", "hands-on", "comprehensive"],
+      "title": "Data Engineering with Python",
+      "url": "https://www.packtpub.com/product/data-engineering-with-python/9781839214189",
+      "type": "book",
+      "description": "Practical guide to building data pipelines with Python. Covers Airflow, Spark, and cloud platforms with hands-on examples.",
+      "tags": ["python", "practical", "pipelines", "hands-on"],
       "createdAt": "2024-01-01T00:00:00.000Z"
     },
     {
       "id": "res-5",
-      "title": "dbt Learn",
-      "url": "https://courses.getdbt.com/",
-      "type": "course",
-      "description": "Official dbt courses for learning the data build tool.",
-      "tags": ["dbt", "free", "official"],
+      "title": "Streaming Systems (O'Reilly)",
+      "url": "https://www.oreilly.com/library/view/streaming-systems/9781491983867/",
+      "type": "book",
+      "description": "Deep dive into streaming data processing by the creators of Apache Beam. Essential for understanding windowing, watermarks, and exactly-once semantics.",
+      "tags": ["streaming", "advanced", "apache-beam", "real-time"],
       "createdAt": "2024-01-01T00:00:00.000Z"
     },
     {
       "id": "res-6",
-      "title": "Apache Airflow Documentation",
-      "url": "https://airflow.apache.org/docs/",
-      "type": "documentation",
-      "description": "Official documentation for Apache Airflow.",
-      "tags": ["airflow", "orchestration", "official"],
+      "title": "Learning Spark (2nd Edition)",
+      "url": "https://www.oreilly.com/library/view/learning-spark-2nd/9781492050032/",
+      "type": "book",
+      "description": "Comprehensive guide to Apache Spark 3.0 including Spark SQL, Structured Streaming, and MLlib. Written by Databricks engineers.",
+      "tags": ["spark", "big-data", "databricks", "pyspark"],
       "createdAt": "2024-01-01T00:00:00.000Z"
     },
     {
       "id": "res-7",
-      "title": "Apache Spark Documentation",
-      "url": "https://spark.apache.org/docs/latest/",
-      "type": "documentation",
-      "description": "Official documentation for Apache Spark.",
-      "tags": ["spark", "big-data", "official"],
+      "title": "Kafka: The Definitive Guide (2nd Edition)",
+      "url": "https://www.oreilly.com/library/view/kafka-the-definitive/9781492043072/",
+      "type": "book",
+      "description": "Everything you need to know about Apache Kafka from the team at Confluent. Covers architecture, producers, consumers, and Kafka Streams.",
+      "tags": ["kafka", "streaming", "confluent", "messaging"],
       "createdAt": "2024-01-01T00:00:00.000Z"
     },
     {
       "id": "res-8",
-      "title": "Confluent Kafka Documentation",
-      "url": "https://docs.confluent.io/",
-      "type": "documentation",
-      "description": "Comprehensive Kafka documentation and tutorials.",
-      "tags": ["kafka", "streaming", "confluent"],
+      "title": "DataTalks.Club Data Engineering Zoomcamp",
+      "url": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
+      "type": "course",
+      "description": "Free, comprehensive 9-week data engineering course with hands-on projects. Covers Docker, Terraform, GCP, Spark, Kafka, and dbt.",
+      "tags": ["free", "hands-on", "comprehensive", "beginner-friendly"],
       "createdAt": "2024-01-01T00:00:00.000Z"
     },
     {
       "id": "res-9",
-      "title": "DataTalks.Club Slack",
-      "url": "https://datatalks.club/slack.html",
-      "type": "community",
-      "description": "Active community for data professionals with channels for DE, ML, and more.",
-      "tags": ["slack", "networking", "active"],
+      "title": "dbt Learn (Official Courses)",
+      "url": "https://courses.getdbt.com/",
+      "type": "course",
+      "description": "Official dbt courses including Fundamentals, Advanced Materializations, and Jinja. Free certification upon completion.",
+      "tags": ["dbt", "free", "official", "certification"],
       "createdAt": "2024-01-01T00:00:00.000Z"
     },
     {
       "id": "res-10",
-      "title": "r/dataengineering",
-      "url": "https://www.reddit.com/r/dataengineering/",
-      "type": "community",
-      "description": "Reddit community for data engineering discussions.",
-      "tags": ["reddit", "discussions", "career"],
+      "title": "Confluent Kafka Courses",
+      "url": "https://developer.confluent.io/learn-kafka/",
+      "type": "course",
+      "description": "Free Kafka courses from Confluent covering fundamentals, Kafka Streams, ksqlDB, and Kafka Connect. Industry-standard training.",
+      "tags": ["kafka", "free", "confluent", "streaming"],
       "createdAt": "2024-01-01T00:00:00.000Z"
     },
     {
       "id": "res-11",
-      "title": "AWS Certified Data Engineer - Associate",
-      "url": "https://aws.amazon.com/certification/certified-data-engineer-associate/",
-      "type": "certification",
-      "description": "AWS certification for data engineering skills.",
-      "tags": ["aws", "cloud", "certification"],
+      "title": "AWS Data Engineering Learning Path",
+      "url": "https://aws.amazon.com/training/learn-about/data-analytics/",
+      "type": "course",
+      "description": "Official AWS training for data analytics and engineering. Includes free digital courses and paid instructor-led options.",
+      "tags": ["aws", "cloud", "official", "free"],
       "createdAt": "2024-01-01T00:00:00.000Z"
     },
     {
       "id": "res-12",
-      "title": "Google Professional Data Engineer",
-      "url": "https://cloud.google.com/certification/data-engineer",
-      "type": "certification",
-      "description": "GCP certification for data engineering.",
-      "tags": ["gcp", "cloud", "certification"],
+      "title": "Google Cloud Data Engineering Path",
+      "url": "https://cloud.google.com/training/data-engineering-and-analytics",
+      "type": "course",
+      "description": "Google Cloud training path covering BigQuery, Dataflow, and Pub/Sub. Includes hands-on labs on Qwiklabs.",
+      "tags": ["gcp", "cloud", "bigquery", "official"],
       "createdAt": "2024-01-01T00:00:00.000Z"
     },
     {
       "id": "res-13",
-      "title": "Databricks Certified Data Engineer",
-      "url": "https://www.databricks.com/learn/certification/data-engineer-associate",
-      "type": "certification",
-      "description": "Databricks certification for Spark and lakehouse concepts.",
-      "tags": ["databricks", "spark", "certification"],
+      "title": "Databricks Academy",
+      "url": "https://www.databricks.com/learn/training",
+      "type": "course",
+      "description": "Free courses on Spark, Delta Lake, and Lakehouse architecture from Databricks. Excellent for learning modern data platform concepts.",
+      "tags": ["databricks", "spark", "delta-lake", "free"],
       "createdAt": "2024-01-01T00:00:00.000Z"
     },
     {
       "id": "res-14",
-      "title": "Mode SQL Tutorial",
-      "url": "https://mode.com/sql-tutorial/",
-      "type": "tool",
-      "description": "Excellent free SQL tutorial from basics to advanced.",
-      "tags": ["sql", "free", "beginner-friendly"],
+      "title": "Stanford CS246: Mining Massive Datasets",
+      "url": "http://web.stanford.edu/class/cs246/",
+      "type": "course",
+      "description": "Stanford course on algorithms for large-scale data processing. Covers MapReduce, recommendation systems, and clustering.",
+      "tags": ["algorithms", "stanford", "free", "advanced"],
       "createdAt": "2024-01-01T00:00:00.000Z"
     },
     {
       "id": "res-15",
+      "title": "Apache Airflow Documentation",
+      "url": "https://airflow.apache.org/docs/",
+      "type": "documentation",
+      "description": "Official Airflow documentation with tutorials, how-to guides, and best practices. Essential reference for orchestration.",
+      "tags": ["airflow", "orchestration", "official"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-16",
+      "title": "Apache Spark Documentation",
+      "url": "https://spark.apache.org/docs/latest/",
+      "type": "documentation",
+      "description": "Official Spark documentation covering Spark SQL, Structured Streaming, MLlib, and GraphX.",
+      "tags": ["spark", "big-data", "official"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-17",
+      "title": "Confluent Documentation",
+      "url": "https://docs.confluent.io/",
+      "type": "documentation",
+      "description": "Comprehensive Kafka documentation including Schema Registry, Kafka Connect, and ksqlDB tutorials.",
+      "tags": ["kafka", "streaming", "confluent"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-18",
+      "title": "dbt Documentation",
+      "url": "https://docs.getdbt.com/",
+      "type": "documentation",
+      "description": "Official dbt docs covering models, tests, macros, packages, and best practices. Excellent getting started guide.",
+      "tags": ["dbt", "transformation", "official"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-19",
+      "title": "Delta Lake Documentation",
+      "url": "https://docs.delta.io/latest/index.html",
+      "type": "documentation",
+      "description": "Official Delta Lake docs covering ACID transactions, time travel, schema evolution, and optimization.",
+      "tags": ["delta-lake", "lakehouse", "databricks"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-20",
       "title": "Great Expectations Documentation",
       "url": "https://docs.greatexpectations.io/",
-      "type": "tool",
-      "description": "Documentation for the Great Expectations data quality framework.",
+      "type": "documentation",
+      "description": "Documentation for Great Expectations data quality framework. Covers expectations, checkpoints, and data docs.",
       "tags": ["data-quality", "testing", "python"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-21",
+      "title": "Terraform AWS Provider Docs",
+      "url": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs",
+      "type": "documentation",
+      "description": "Reference documentation for all AWS resources in Terraform. Essential for infrastructure as code.",
+      "tags": ["terraform", "aws", "infrastructure"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-22",
+      "title": "DataTalks.Club Slack",
+      "url": "https://datatalks.club/slack.html",
+      "type": "community",
+      "description": "Active community of 50k+ data professionals. Channels for DE, ML, analytics, and career advice. Very helpful for beginners.",
+      "tags": ["slack", "networking", "active", "free"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-23",
+      "title": "r/dataengineering",
+      "url": "https://www.reddit.com/r/dataengineering/",
+      "type": "community",
+      "description": "Reddit community with 200k+ members discussing tools, career advice, and industry trends.",
+      "tags": ["reddit", "discussions", "career"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-24",
+      "title": "dbt Community Slack",
+      "url": "https://www.getdbt.com/community/",
+      "type": "community",
+      "description": "50k+ member Slack community for dbt users. Great for getting help and learning best practices.",
+      "tags": ["dbt", "slack", "community"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-25",
+      "title": "Data Engineering Weekly Newsletter",
+      "url": "https://www.dataengineeringweekly.com/",
+      "type": "community",
+      "description": "Weekly newsletter covering data engineering news, tools, and tutorials. Great way to stay current.",
+      "tags": ["newsletter", "news", "weekly"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-26",
+      "title": "Seattle Data Guy Blog",
+      "url": "https://www.theseattledataguy.com/",
+      "type": "community",
+      "description": "Blog and YouTube channel with practical data engineering content. Great explanations of complex topics.",
+      "tags": ["blog", "youtube", "practical"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-27",
+      "title": "AWS Certified Data Engineer - Associate",
+      "url": "https://aws.amazon.com/certification/certified-data-engineer-associate/",
+      "type": "certification",
+      "description": "AWS certification validating skills in data ingestion, transformation, orchestration, and security on AWS.",
+      "tags": ["aws", "cloud", "certification", "2023"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-28",
+      "title": "Google Professional Data Engineer",
+      "url": "https://cloud.google.com/certification/data-engineer",
+      "type": "certification",
+      "description": "GCP certification covering BigQuery, Dataflow, Pub/Sub, and ML on GCP. Highly respected in industry.",
+      "tags": ["gcp", "cloud", "certification"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-29",
+      "title": "Databricks Certified Data Engineer Associate",
+      "url": "https://www.databricks.com/learn/certification/data-engineer-associate",
+      "type": "certification",
+      "description": "Validates skills in Spark, Delta Lake, and lakehouse architecture. Good for Databricks-heavy shops.",
+      "tags": ["databricks", "spark", "certification"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-30",
+      "title": "Snowflake SnowPro Core Certification",
+      "url": "https://learn.snowflake.com/en/certifications/snowpro-core/",
+      "type": "certification",
+      "description": "Foundational Snowflake certification covering architecture, data loading, and virtual warehouses.",
+      "tags": ["snowflake", "cloud", "certification"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-31",
+      "title": "Mode SQL Tutorial",
+      "url": "https://mode.com/sql-tutorial/",
+      "type": "tool",
+      "description": "Excellent free SQL tutorial from basics to advanced. Covers window functions, CTEs, and performance.",
+      "tags": ["sql", "free", "beginner-friendly", "interactive"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-32",
+      "title": "SQLBolt - Interactive SQL Lessons",
+      "url": "https://sqlbolt.com/",
+      "type": "tool",
+      "description": "Interactive SQL lessons with in-browser exercises. Great for beginners learning SQL fundamentals.",
+      "tags": ["sql", "free", "interactive", "beginner"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-33",
+      "title": "LeetCode SQL Problems",
+      "url": "https://leetcode.com/problemset/database/",
+      "type": "tool",
+      "description": "SQL practice problems from easy to hard. Essential for interview preparation.",
+      "tags": ["sql", "practice", "interview-prep"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-34",
+      "title": "DataGrip (JetBrains)",
+      "url": "https://www.jetbrains.com/datagrip/",
+      "type": "tool",
+      "description": "Powerful database IDE supporting multiple databases. Great for SQL development and data exploration.",
+      "tags": ["ide", "sql", "database", "paid"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-35",
+      "title": "DBeaver Community Edition",
+      "url": "https://dbeaver.io/",
+      "type": "tool",
+      "description": "Free, open-source database tool supporting 80+ databases. Good alternative to paid tools.",
+      "tags": ["ide", "sql", "database", "free"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-36",
+      "title": "Postman",
+      "url": "https://www.postman.com/",
+      "type": "tool",
+      "description": "API development and testing tool. Essential for working with REST APIs in ETL pipelines.",
+      "tags": ["api", "testing", "free"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-37",
+      "title": "Docker Desktop",
+      "url": "https://www.docker.com/products/docker-desktop/",
+      "type": "tool",
+      "description": "Container runtime for local development. Essential for running Kafka, Airflow, and other tools locally.",
+      "tags": ["docker", "containers", "local-dev"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-38",
+      "title": "NYC Taxi Dataset",
+      "url": "https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page",
+      "type": "tool",
+      "description": "Billions of taxi trip records. The classic dataset for learning big data processing.",
+      "tags": ["dataset", "big-data", "public", "free"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-39",
+      "title": "Kaggle Datasets",
+      "url": "https://www.kaggle.com/datasets",
+      "type": "tool",
+      "description": "Thousands of free datasets for practice projects. Good for building portfolio projects.",
+      "tags": ["dataset", "free", "variety"],
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "res-40",
+      "title": "Draw.io (diagrams.net)",
+      "url": "https://app.diagrams.net/",
+      "type": "tool",
+      "description": "Free diagramming tool for creating architecture diagrams, data flow diagrams, and ERDs.",
+      "tags": ["diagrams", "architecture", "free"],
       "createdAt": "2024-01-01T00:00:00.000Z"
     }
   ],
-  "lastUpdated": "2024-01-01T00:00:00.000Z"
+  "lastUpdated": "2025-12-18T12:00:00.000Z"
 }

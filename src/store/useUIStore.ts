@@ -32,7 +32,7 @@ interface UIStore {
 
 export const useUIStore = create<UIStore>((set) => ({
   // Initial state
-  editMode: false,
+  editMode: true,
   selectedPhaseId: null,
   selectedSectionId: null,
   sidebarOpen: true,

@@ -14,6 +14,7 @@ import {
   X,
   BarChart3,
   FolderKanban,
+  Settings,
 } from 'lucide-react';
 import { useRoadmapStore } from '@/store/useRoadmapStore';
 import { useUIStore } from '@/store/useUIStore';
@@ -175,6 +176,16 @@ export default function Sidebar() {
         >
           <FolderKanban className="w-4 h-4" />
           Projects
+        </Link>
+        <Link
+          href="/settings"
+          className={cn(
+            "flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors mt-1",
+            pathname === '/settings' ? 'bg-gray-800 text-white' : 'text-gray-400 hover:bg-gray-800 hover:text-white'
+          )}
+        >
+          <Settings className="w-4 h-4" />
+          Settings
         </Link>
       </nav>
       

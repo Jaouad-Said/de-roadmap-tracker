@@ -1,13 +1,14 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Search, Filter, Plus, StickyNote, Calendar } from 'lucide-react';
+import { Search, Filter, Plus, StickyNote, Calendar, FileText, Tag } from 'lucide-react';
 import { useRoadmapStore } from '@/store/useRoadmapStore';
 import { useUIStore } from '@/store/useUIStore';
 import NoteCard from '@/components/notes/NoteCard';
 import NoteEditor from '@/components/notes/NoteEditor';
-import { Note } from '@/types';
+import { Note, NoteTemplateType } from '@/types';
 import { formatDate } from '@/lib/utils';
+import { getTemplateList, getTemplateContent } from '@/lib/noteTemplates';
 
 export default function NotesPage() {
   const { notes, roadmap, addNote, updateNote, deleteNote } = useRoadmapStore();
@@ -223,21 +224,81 @@ function NoteEditorForm({
   note: Note | null;
   sectionId?: string;
   sections: { id: string; title: string; phaseTitle: string }[];
-  onSave: (data: { title: string; content: string; sectionId?: string }) => void;
+  onSave: (data: { title: string; content: string; sectionId?: string; tags?: string[]; template?: NoteTemplateType }) => void;
   onCancel: () => void;
 }) {
   const [title, setTitle] = useState(note?.title || '');
   const [content, setContent] = useState(note?.content || '');
   const [section, setSection] = useState(note?.sectionId || sectionId || '');
+  const [selectedTemplate, setSelectedTemplate] = useState<NoteTemplateType>(note?.template || 'blank');
+  const [tags, setTags] = useState<string[]>(note?.tags || []);
+  const [tagInput, setTagInput] = useState('');
+  
+  const templates = getTemplateList();
+  
+  const handleTemplateChange = (templateId: NoteTemplateType) => {
+    setSelectedTemplate(templateId);
+    if (templateId !== 'blank' && !content.trim()) {
+      setContent(getTemplateContent(templateId));
+    }
+  };
+
+  const handleAddTag = () => {
+    if (tagInput.trim() && !tags.includes(tagInput.trim())) {
+      setTags([...tags, tagInput.trim()]);
+      setTagInput('');
+    }
+  };
+
+  const handleRemoveTag = (tag: string) => {
+    setTags(tags.filter(t => t !== tag));
+  };
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!title.trim() || !content.trim()) return;
-    onSave({ title, content, sectionId: section || undefined });
+    if (!title.trim()) return;
+    onSave({ 
+      title, 
+      content, 
+      sectionId: section || undefined,
+      tags: tags.length > 0 ? tags : undefined,
+      template: selectedTemplate !== 'blank' ? selectedTemplate : undefined,
+    });
   };
   
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      {/* Template Selection - only for new notes */}
+      {!note && (
+        <div>
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <FileText className="w-4 h-4 inline mr-1" />
+            Template
+          </label>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            {templates.map(template => (
+              <button
+                key={template.id}
+                type="button"
+                onClick={() => handleTemplateChange(template.id)}
+                className={`p-3 text-left rounded-lg border transition-colors ${
+                  selectedTemplate === template.id
+                    ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20'
+                    : 'border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600'
+                }`}
+              >
+                <div className="font-medium text-sm text-gray-900 dark:text-white">
+                  {template.name}
+                </div>
+                <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+                  {template.description}
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
       <div>
         <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           Title
@@ -247,7 +308,7 @@ function NoteEditorForm({
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Note title..."
-          className="w-full px-3 py-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
           required
         />
       </div>
@@ -259,7 +320,7 @@ function NoteEditorForm({
         <select
           value={section}
           onChange={(e) => setSection(e.target.value)}
-          className="w-full px-3 py-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
         >
           <option value="">No section</option>
           {sections.map(s => (
@@ -269,18 +330,60 @@ function NoteEditorForm({
           ))}
         </select>
       </div>
+
+      {/* Tags */}
+      <div>
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+          <Tag className="w-4 h-4 inline mr-1" />
+          Tags
+        </label>
+        <div className="flex gap-2 mb-2">
+          <input
+            type="text"
+            value={tagInput}
+            onChange={(e) => setTagInput(e.target.value)}
+            onKeyPress={(e) => e.key === 'Enter' && (e.preventDefault(), handleAddTag())}
+            placeholder="Add tag..."
+            className="flex-1 px-3 py-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+          />
+          <button
+            type="button"
+            onClick={handleAddTag}
+            className="px-3 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700"
+          >
+            <Plus className="w-5 h-5" />
+          </button>
+        </div>
+        {tags.length > 0 && (
+          <div className="flex flex-wrap gap-1.5">
+            {tags.map(tag => (
+              <span
+                key={tag}
+                className="px-2 py-0.5 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 text-sm rounded-full flex items-center gap-1"
+              >
+                {tag}
+                <button
+                  type="button"
+                  onClick={() => handleRemoveTag(tag)}
+                  className="hover:text-purple-900 dark:hover:text-purple-200"
+                >
+                  ×
+                </button>
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
       
       <div>
         <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
           Content
         </label>
-        <textarea
-          value={content}
-          onChange={(e) => setContent(e.target.value)}
-          placeholder="Write your note..."
-          rows={6}
-          className="w-full px-3 py-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
-          required
+        <NoteEditor
+          content={content}
+          onChange={setContent}
+          placeholder="Write your notes here... Use the toolbar for formatting, or type markdown-style syntax."
+          className="min-h-[300px]"
         />
       </div>
       
@@ -294,7 +397,7 @@ function NoteEditorForm({
         </button>
         <button
           type="submit"
-          className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+          className="px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors"
         >
           {note ? 'Update' : 'Create'} Note
         </button>

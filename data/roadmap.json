@@ -12,33 +12,97 @@
           "title": "SQL & Data Modeling",
           "topics": [
             {
-              "id": "topic-sql-data-modeling-1",
-              "title": "Master SQL deeply (window functions, CTEs, performance)",
+              "id": "topic-sql-1",
+              "title": "Advanced SQL: Window Functions (ROW_NUMBER, RANK, LAG/LEAD, NTILE)",
               "completed": false
             },
             {
-              "id": "topic-sql-data-modeling-2",
-              "title": "Dimensional modeling (star schema, snowflake)",
+              "id": "topic-sql-2",
+              "title": "Common Table Expressions (CTEs) and Recursive Queries",
               "completed": false
             },
             {
-              "id": "topic-sql-data-modeling-3",
-              "title": "Data vault basics",
+              "id": "topic-sql-3",
+              "title": "Query Execution Plans and Performance Tuning",
               "completed": false
             },
             {
-              "id": "topic-sql-data-modeling-4",
-              "title": "Database normalization vs denormalization",
+              "id": "topic-sql-4",
+              "title": "Star Schema Design: Facts, Dimensions, and Grain",
               "completed": false
             },
             {
-              "id": "topic-sql-data-modeling-5",
-              "title": "Index optimization",
+              "id": "topic-sql-5",
+              "title": "Snowflake Schema and When to Use It",
+              "completed": false
+            },
+            {
+              "id": "topic-sql-6",
+              "title": "Data Vault 2.0: Hubs, Links, and Satellites",
+              "completed": false
+            },
+            {
+              "id": "topic-sql-7",
+              "title": "Normalization Forms (1NF to 3NF) vs Analytical Denormalization",
+              "completed": false
+            },
+            {
+              "id": "topic-sql-8",
+              "title": "Index Types: B-Tree, Hash, Bitmap, and Covering Indexes",
+              "completed": false
+            },
+            {
+              "id": "topic-sql-9",
+              "title": "Partitioning Strategies: Range, List, and Hash",
+              "completed": false
+            },
+            {
+              "id": "topic-sql-10",
+              "title": "Slowly Changing Dimensions (SCD Type 1, 2, 3)",
               "completed": false
             }
           ],
-          "tasks": [],
-          "attachments": [],
+          "tasks": [
+            {
+              "id": "task-sql-1",
+              "title": "Complete LeetCode SQL 50 problems (Medium/Hard)",
+              "completed": false
+            },
+            {
+              "id": "task-sql-2",
+              "title": "Design star schema for e-commerce analytics (orders, products, customers, time)",
+              "completed": false
+            },
+            {
+              "id": "task-sql-3",
+              "title": "Write 5 complex reporting queries with window functions",
+              "completed": false
+            },
+            {
+              "id": "task-sql-4",
+              "title": "Optimize a slow query from >10s to <1s using EXPLAIN ANALYZE",
+              "completed": false
+            },
+            {
+              "id": "task-sql-5",
+              "title": "Implement SCD Type 2 for a customer dimension table",
+              "completed": false
+            },
+            {
+              "id": "task-sql-6",
+              "title": "Create PostgreSQL database with proper indexing strategy",
+              "completed": false
+            }
+          ],
+          "attachments": [
+            {
+              "id": "attachment-cf377b8a",
+              "type": "file",
+              "title": "5_Fundamentals-of-Data-Engineering-by-Joe-Reis-and-Matt-Housley_bibis.ir.pdf",
+              "fileType": "pdf",
+              "createdAt": "2025-12-19T08:41:09.604Z"
+            }
+          ],
           "why": "This is your daily language. Every data engineer writes SQL constantly. Understanding data modeling separates good engineers from great ones - you'll design schemas that make analysts love you and queries that actually perform.",
           "how": "Build a small analytics database for a fictional e-commerce company. Create fact and dimension tables, write complex reporting queries, and optimize them. Use PostgreSQL or MySQL locally.",
           "order": 1
@@ -47,13 +111,95 @@
           "id": "python-programming",
           "title": "Python for Data Engineering",
           "topics": [
-            "Python fundamentals (data structures, OOP)",
-            "Pandas & NumPy for data manipulation",
-            "File handling (CSV, JSON, Parquet)",
-            "API interactions (requests, authentication)",
-            "Error handling and logging",
-            "Virtual environments and dependency management"
+            {
+              "id": "topic-python-1",
+              "title": "Python Data Structures: Lists, Dicts, Sets, and Comprehensions",
+              "completed": false
+            },
+            {
+              "id": "topic-python-2",
+              "title": "Object-Oriented Programming: Classes, Inheritance, and Design Patterns",
+              "completed": false
+            },
+            {
+              "id": "topic-python-3",
+              "title": "Pandas: DataFrames, GroupBy, Merge, and Pivot Operations",
+              "completed": false
+            },
+            {
+              "id": "topic-python-4",
+              "title": "NumPy: Arrays, Vectorization, and Broadcasting",
+              "completed": false
+            },
+            {
+              "id": "topic-python-5",
+              "title": "File Formats: CSV, JSON, Parquet, and Avro",
+              "completed": false
+            },
+            {
+              "id": "topic-python-6",
+              "title": "REST APIs: Requests, Authentication (OAuth, API Keys), Pagination",
+              "completed": false
+            },
+            {
+              "id": "topic-python-7",
+              "title": "Error Handling: Try/Except, Custom Exceptions, Logging Module",
+              "completed": false
+            },
+            {
+              "id": "topic-python-8",
+              "title": "Environment Management: venv, Poetry, pip-tools",
+              "completed": false
+            },
+            {
+              "id": "topic-python-9",
+              "title": "Type Hints and Pydantic for Data Validation",
+              "completed": false
+            },
+            {
+              "id": "topic-python-10",
+              "title": "Testing: pytest, fixtures, and mocking",
+              "completed": false
+            }
           ],
+          "tasks": [
+            {
+              "id": "task-python-1",
+              "title": "Build ETL pipeline pulling from GitHub API with pagination",
+              "completed": false
+            },
+            {
+              "id": "task-python-2",
+              "title": "Process 1GB CSV file efficiently with Pandas chunking",
+              "completed": false
+            },
+            {
+              "id": "task-python-3",
+              "title": "Convert between JSON, CSV, and Parquet formats",
+              "completed": false
+            },
+            {
+              "id": "task-python-4",
+              "title": "Implement retry logic with exponential backoff for API calls",
+              "completed": false
+            },
+            {
+              "id": "task-python-5",
+              "title": "Create data validation class using Pydantic",
+              "completed": false
+            },
+            {
+              "id": "task-python-6",
+              "title": "Write unit tests for ETL functions with pytest",
+              "completed": false
+            },
+            {
+              "id": "task-python-7",
+              "title": "Set up logging that writes to both file and console",
+              "completed": false
+            }
+          ],
+          "attachments": [],
           "why": "Python is the glue language of data engineering. You'll use it for ETL scripts, API integrations, data quality checks, and automation. It's everywhere in the data stack.",
           "how": "Build an ETL pipeline that pulls data from a public API (like GitHub or weather API), transforms it with Pandas, handles errors gracefully, and saves to multiple formats.",
           "order": 2
@@ -62,13 +208,85 @@
           "id": "linux-cli-git",
           "title": "Linux, CLI & Git",
           "topics": [
-            "Linux command line essentials",
-            "Bash scripting basics",
-            "Git workflow (branching, merging, PRs)",
-            "SSH and remote server management",
-            "Cron jobs and scheduling",
-            "Environment variables and configuration"
+            {
+              "id": "topic-linux-1",
+              "title": "Essential Commands: ls, cd, cp, mv, rm, chmod, chown",
+              "completed": false
+            },
+            {
+              "id": "topic-linux-2",
+              "title": "Text Processing: grep, sed, awk, cut, sort, uniq",
+              "completed": false
+            },
+            {
+              "id": "topic-linux-3",
+              "title": "Process Management: ps, top, htop, kill, nohup, screen",
+              "completed": false
+            },
+            {
+              "id": "topic-linux-4",
+              "title": "Bash Scripting: Variables, Loops, Conditionals, Functions",
+              "completed": false
+            },
+            {
+              "id": "topic-linux-5",
+              "title": "Git Fundamentals: add, commit, push, pull, merge, rebase",
+              "completed": false
+            },
+            {
+              "id": "topic-linux-6",
+              "title": "Git Workflow: Feature Branches, Pull Requests, Code Review",
+              "completed": false
+            },
+            {
+              "id": "topic-linux-7",
+              "title": "SSH: Key Generation, Config Files, Tunneling",
+              "completed": false
+            },
+            {
+              "id": "topic-linux-8",
+              "title": "Cron Jobs: Syntax, Logging, Error Handling",
+              "completed": false
+            },
+            {
+              "id": "topic-linux-9",
+              "title": "Environment Variables and .env Files",
+              "completed": false
+            }
           ],
+          "tasks": [
+            {
+              "id": "task-linux-1",
+              "title": "Set up WSL2 or Linux VM with development tools",
+              "completed": false
+            },
+            {
+              "id": "task-linux-2",
+              "title": "Write bash script to process and aggregate log files",
+              "completed": false
+            },
+            {
+              "id": "task-linux-3",
+              "title": "Create cron job that runs ETL script daily at 2 AM",
+              "completed": false
+            },
+            {
+              "id": "task-linux-4",
+              "title": "Set up SSH keys for GitHub and remote server access",
+              "completed": false
+            },
+            {
+              "id": "task-linux-5",
+              "title": "Practice Git workflow: create branch, make PR, resolve conflict",
+              "completed": false
+            },
+            {
+              "id": "task-linux-6",
+              "title": "Write script to monitor disk space and send alerts",
+              "completed": false
+            }
+          ],
+          "attachments": [],
           "why": "Most data infrastructure runs on Linux. You'll SSH into servers, debug pipelines via command line, and collaborate through Git. These skills make you efficient and self-sufficient.",
           "how": "Set up a Linux VM or use WSL. Write bash scripts that automate daily tasks. Create a Git workflow for your projects with proper branching strategy.",
           "order": 3
@@ -77,13 +295,90 @@
           "id": "cloud-fundamentals",
           "title": "Cloud Fundamentals (AWS/GCP/Azure)",
           "topics": [
-            "Core services (compute, storage, networking)",
-            "S3/GCS/Blob storage deep dive",
-            "IAM and security basics",
-            "CLI tools for cloud providers",
-            "Cost management basics",
-            "Serverless basics (Lambda/Cloud Functions)"
+            {
+              "id": "topic-cloud-1",
+              "title": "AWS Core: EC2, VPC, Security Groups, Load Balancers",
+              "completed": false
+            },
+            {
+              "id": "topic-cloud-2",
+              "title": "S3 Deep Dive: Storage Classes, Lifecycle Policies, Versioning",
+              "completed": false
+            },
+            {
+              "id": "topic-cloud-3",
+              "title": "IAM: Users, Roles, Policies, and Least Privilege",
+              "completed": false
+            },
+            {
+              "id": "topic-cloud-4",
+              "title": "AWS CLI and boto3 Python SDK",
+              "completed": false
+            },
+            {
+              "id": "topic-cloud-5",
+              "title": "Lambda Functions: Triggers, Layers, Cold Starts",
+              "completed": false
+            },
+            {
+              "id": "topic-cloud-6",
+              "title": "AWS Glue: Crawlers, ETL Jobs, Data Catalog",
+              "completed": false
+            },
+            {
+              "id": "topic-cloud-7",
+              "title": "Athena: Querying S3 Data with SQL",
+              "completed": false
+            },
+            {
+              "id": "topic-cloud-8",
+              "title": "Cost Management: Budgets, Cost Explorer, Reserved Instances",
+              "completed": false
+            },
+            {
+              "id": "topic-cloud-9",
+              "title": "CloudWatch: Logs, Metrics, Alarms, Dashboards",
+              "completed": false
+            }
           ],
+          "tasks": [
+            {
+              "id": "task-cloud-1",
+              "title": "Create AWS free tier account and set up billing alerts",
+              "completed": false
+            },
+            {
+              "id": "task-cloud-2",
+              "title": "Build data lake structure in S3 (raw/processed/curated layers)",
+              "completed": false
+            },
+            {
+              "id": "task-cloud-3",
+              "title": "Create IAM role for Lambda with S3 read/write permissions",
+              "completed": false
+            },
+            {
+              "id": "task-cloud-4",
+              "title": "Deploy Lambda function triggered by S3 file upload",
+              "completed": false
+            },
+            {
+              "id": "task-cloud-5",
+              "title": "Set up Glue Crawler to catalog S3 data automatically",
+              "completed": false
+            },
+            {
+              "id": "task-cloud-6",
+              "title": "Query S3 data using Athena and save results",
+              "completed": false
+            },
+            {
+              "id": "task-cloud-7",
+              "title": "Create CloudWatch dashboard for Lambda metrics",
+              "completed": false
+            }
+          ],
+          "attachments": [],
           "why": "Modern data engineering lives in the cloud. Understanding cloud services is non-negotiable - you'll provision infrastructure, manage data lakes, and deploy pipelines on cloud platforms.",
           "how": "Pick one cloud (AWS recommended for jobs). Get free tier, build a data lake with S3, set up IAM roles properly, and deploy a Lambda function that processes files.",
           "order": 4
@@ -101,14 +396,89 @@
           "id": "workflow-orchestration",
           "title": "Workflow Orchestration",
           "topics": [
-            "Apache Airflow fundamentals",
-            "DAGs, operators, and hooks",
-            "Task dependencies and sensors",
-            "Airflow best practices",
-            "Alternative: Prefect or Dagster basics",
-            "Monitoring and alerting"
+            {
+              "id": "topic-orch-1",
+              "title": "Airflow Architecture: Scheduler, Webserver, Workers, Metadata DB",
+              "completed": false
+            },
+            {
+              "id": "topic-orch-2",
+              "title": "DAG Design: Dependencies, Triggers, Catchup, Backfill",
+              "completed": false
+            },
+            {
+              "id": "topic-orch-3",
+              "title": "Operators: BashOperator, PythonOperator, Custom Operators",
+              "completed": false
+            },
+            {
+              "id": "topic-orch-4",
+              "title": "Hooks and Connections: Database, S3, HTTP",
+              "completed": false
+            },
+            {
+              "id": "topic-orch-5",
+              "title": "Sensors: FileSensor, ExternalTaskSensor, Custom Sensors",
+              "completed": false
+            },
+            {
+              "id": "topic-orch-6",
+              "title": "TaskGroups and Dynamic DAG Generation",
+              "completed": false
+            },
+            {
+              "id": "topic-orch-7",
+              "title": "XComs for Task Communication",
+              "completed": false
+            },
+            {
+              "id": "topic-orch-8",
+              "title": "Airflow Best Practices: Idempotency, Atomicity, Incremental Loads",
+              "completed": false
+            },
+            {
+              "id": "topic-orch-9",
+              "title": "Modern Alternatives: Prefect, Dagster, Mage Comparison",
+              "completed": false
+            }
           ],
-          "tasks": [],
+          "tasks": [
+            {
+              "id": "task-orch-1",
+              "title": "Set up Airflow locally using Docker Compose",
+              "completed": false
+            },
+            {
+              "id": "task-orch-2",
+              "title": "Create DAG with 5+ tasks and proper dependencies",
+              "completed": false
+            },
+            {
+              "id": "task-orch-3",
+              "title": "Implement retry logic with exponential backoff",
+              "completed": false
+            },
+            {
+              "id": "task-orch-4",
+              "title": "Build custom operator for API data extraction",
+              "completed": false
+            },
+            {
+              "id": "task-orch-5",
+              "title": "Set up email alerts for task failures",
+              "completed": false
+            },
+            {
+              "id": "task-orch-6",
+              "title": "Create dynamic DAG using Jinja templating",
+              "completed": false
+            },
+            {
+              "id": "task-orch-7",
+              "title": "Implement sensor to wait for file arrival",
+              "completed": false
+            }
+          ],
           "attachments": [],
           "why": "Orchestration is how you make pipelines run automatically, handle failures, and maintain dependencies. Airflow is the industry standard and appears in almost every job description.",
           "how": "Install Airflow locally with Docker. Build a DAG that orchestrates your ETL pipeline from Phase 1. Add error handling, retries, and email alerts.",
@@ -118,13 +488,90 @@
           "id": "batch-processing",
           "title": "Batch Data Processing",
           "topics": [
-            "Apache Spark fundamentals",
-            "PySpark for data transformations",
-            "Spark SQL and DataFrames",
-            "Partitioning and optimization",
-            "Spark on cloud (EMR, Dataproc)",
-            "Delta Lake basics"
+            {
+              "id": "topic-batch-1",
+              "title": "Spark Architecture: Driver, Executors, Cluster Managers",
+              "completed": false
+            },
+            {
+              "id": "topic-batch-2",
+              "title": "RDDs vs DataFrames vs Datasets",
+              "completed": false
+            },
+            {
+              "id": "topic-batch-3",
+              "title": "PySpark Transformations: map, filter, groupBy, join, window",
+              "completed": false
+            },
+            {
+              "id": "topic-batch-4",
+              "title": "Spark SQL: SQL on DataFrames, Temp Views, UDFs",
+              "completed": false
+            },
+            {
+              "id": "topic-batch-5",
+              "title": "Partitioning: repartition vs coalesce, partition pruning",
+              "completed": false
+            },
+            {
+              "id": "topic-batch-6",
+              "title": "Optimization: Broadcast Joins, Caching, Spark UI Analysis",
+              "completed": false
+            },
+            {
+              "id": "topic-batch-7",
+              "title": "Spark on Cloud: EMR, Dataproc, Databricks",
+              "completed": false
+            },
+            {
+              "id": "topic-batch-8",
+              "title": "Delta Lake: ACID Transactions, Time Travel, Z-Ordering",
+              "completed": false
+            },
+            {
+              "id": "topic-batch-9",
+              "title": "Apache Iceberg: Table Format, Schema Evolution",
+              "completed": false
+            }
           ],
+          "tasks": [
+            {
+              "id": "task-batch-1",
+              "title": "Install PySpark locally and run first DataFrame job",
+              "completed": false
+            },
+            {
+              "id": "task-batch-2",
+              "title": "Process NYC Taxi dataset (100M+ rows) with PySpark",
+              "completed": false
+            },
+            {
+              "id": "task-batch-3",
+              "title": "Write complex aggregation with window functions in Spark",
+              "completed": false
+            },
+            {
+              "id": "task-batch-4",
+              "title": "Optimize slow Spark job using Spark UI insights",
+              "completed": false
+            },
+            {
+              "id": "task-batch-5",
+              "title": "Implement partitioned write to Delta Lake",
+              "completed": false
+            },
+            {
+              "id": "task-batch-6",
+              "title": "Set up Spark job on EMR or Databricks Community Edition",
+              "completed": false
+            },
+            {
+              "id": "task-batch-7",
+              "title": "Compare Spark vs Pandas performance on large dataset",
+              "completed": false
+            }
+          ],
+          "attachments": [],
           "why": "When datasets get big, single-machine Python won't cut it. Spark lets you process terabytes of data efficiently. It's essential for any company with serious data volumes.",
           "how": "Set up Spark locally or on cloud. Rewrite your previous ETL to use PySpark. Process a large public dataset (NYC taxi data is great) and compare performance.",
           "order": 2
@@ -133,13 +580,95 @@
           "id": "data-warehousing",
           "title": "Data Warehousing",
           "topics": [
-            "Data warehouse concepts and architecture",
-            "Snowflake, BigQuery, or Redshift",
-            "ELT vs ETL patterns",
-            "dbt (data build tool) fundamentals",
-            "Data warehouse optimization",
-            "Slowly changing dimensions"
+            {
+              "id": "topic-dw-1",
+              "title": "Modern DW Architecture: Separation of Storage and Compute",
+              "completed": false
+            },
+            {
+              "id": "topic-dw-2",
+              "title": "Snowflake: Virtual Warehouses, Time Travel, Zero-Copy Cloning",
+              "completed": false
+            },
+            {
+              "id": "topic-dw-3",
+              "title": "BigQuery: Slots, Partitioning, Clustering, Materialized Views",
+              "completed": false
+            },
+            {
+              "id": "topic-dw-4",
+              "title": "ELT vs ETL: When to Transform",
+              "completed": false
+            },
+            {
+              "id": "topic-dw-5",
+              "title": "dbt Fundamentals: Models, Sources, Refs, Macros",
+              "completed": false
+            },
+            {
+              "id": "topic-dw-6",
+              "title": "dbt Testing: Schema Tests, Custom Tests, Data Freshness",
+              "completed": false
+            },
+            {
+              "id": "topic-dw-7",
+              "title": "dbt Documentation: YAML, Docs Blocks, Lineage Graphs",
+              "completed": false
+            },
+            {
+              "id": "topic-dw-8",
+              "title": "Slowly Changing Dimensions: Implementation Patterns",
+              "completed": false
+            },
+            {
+              "id": "topic-dw-9",
+              "title": "Warehouse Optimization: Clustering, Partitioning, Materialization",
+              "completed": false
+            }
           ],
+          "tasks": [
+            {
+              "id": "task-dw-1",
+              "title": "Create free Snowflake trial or BigQuery sandbox",
+              "completed": false
+            },
+            {
+              "id": "task-dw-2",
+              "title": "Load sample data and create raw/staging/mart layers",
+              "completed": false
+            },
+            {
+              "id": "task-dw-3",
+              "title": "Install dbt-core and initialize project",
+              "completed": false
+            },
+            {
+              "id": "task-dw-4",
+              "title": "Build staging models with source freshness tests",
+              "completed": false
+            },
+            {
+              "id": "task-dw-5",
+              "title": "Create dimensional model (fact + dimension tables) in dbt",
+              "completed": false
+            },
+            {
+              "id": "task-dw-6",
+              "title": "Add schema tests: unique, not_null, accepted_values",
+              "completed": false
+            },
+            {
+              "id": "task-dw-7",
+              "title": "Generate and publish dbt documentation site",
+              "completed": false
+            },
+            {
+              "id": "task-dw-8",
+              "title": "Implement incremental model with merge strategy",
+              "completed": false
+            }
+          ],
+          "attachments": [],
           "why": "Data warehouses are where your transformed data lives for analytics. dbt has revolutionized how we think about transformations. These skills are in extremely high demand.",
           "how": "Get a free Snowflake or BigQuery account. Load data, build dbt models with proper testing and documentation. Create a star schema for analytics.",
           "order": 3
@@ -148,13 +677,85 @@
           "id": "data-quality",
           "title": "Data Quality & Testing",
           "topics": [
-            "Data quality dimensions (accuracy, completeness, etc.)",
-            "Great Expectations framework",
-            "dbt tests",
-            "Data contracts",
-            "Monitoring data pipelines",
-            "Anomaly detection basics"
+            {
+              "id": "topic-dq-1",
+              "title": "Data Quality Dimensions: Accuracy, Completeness, Consistency, Timeliness",
+              "completed": false
+            },
+            {
+              "id": "topic-dq-2",
+              "title": "Great Expectations: Expectations, Checkpoints, Data Docs",
+              "completed": false
+            },
+            {
+              "id": "topic-dq-3",
+              "title": "Soda Core: YAML-based Data Quality Checks",
+              "completed": false
+            },
+            {
+              "id": "topic-dq-4",
+              "title": "dbt Tests: Built-in, Custom, and Package Tests",
+              "completed": false
+            },
+            {
+              "id": "topic-dq-5",
+              "title": "Data Contracts: Schema Definitions and SLAs",
+              "completed": false
+            },
+            {
+              "id": "topic-dq-6",
+              "title": "Pipeline Monitoring: Metrics, Alerts, Dashboards",
+              "completed": false
+            },
+            {
+              "id": "topic-dq-7",
+              "title": "Anomaly Detection: Statistical Methods for Data Drift",
+              "completed": false
+            },
+            {
+              "id": "topic-dq-8",
+              "title": "Data Profiling: Understanding Data Distributions",
+              "completed": false
+            }
           ],
+          "tasks": [
+            {
+              "id": "task-dq-1",
+              "title": "Install Great Expectations and create first expectation suite",
+              "completed": false
+            },
+            {
+              "id": "task-dq-2",
+              "title": "Define 10+ expectations for a production dataset",
+              "completed": false
+            },
+            {
+              "id": "task-dq-3",
+              "title": "Create checkpoint that validates data on each pipeline run",
+              "completed": false
+            },
+            {
+              "id": "task-dq-4",
+              "title": "Generate Data Docs and host as static site",
+              "completed": false
+            },
+            {
+              "id": "task-dq-5",
+              "title": "Write custom expectation for business rule validation",
+              "completed": false
+            },
+            {
+              "id": "task-dq-6",
+              "title": "Integrate Great Expectations into Airflow DAG",
+              "completed": false
+            },
+            {
+              "id": "task-dq-7",
+              "title": "Set up alerts for data quality failures",
+              "completed": false
+            }
+          ],
+          "attachments": [],
           "why": "Bad data costs companies millions. Data quality is increasingly important and is a key differentiator for senior engineers. Quality-first mindset will set you apart.",
           "how": "Add Great Expectations to your pipeline. Define expectations for your data, build a validation suite, and integrate it into your Airflow DAG.",
           "order": 4
@@ -172,13 +773,90 @@
           "id": "kafka-fundamentals",
           "title": "Apache Kafka Fundamentals",
           "topics": [
-            "Event streaming concepts",
-            "Kafka architecture (brokers, topics, partitions)",
-            "Producers and consumers",
-            "Kafka Connect",
-            "Schema Registry and Avro",
-            "Kafka Streams basics"
+            {
+              "id": "topic-kafka-1",
+              "title": "Event Streaming Concepts: Events, Streams, Event-Driven Architecture",
+              "completed": false
+            },
+            {
+              "id": "topic-kafka-2",
+              "title": "Kafka Architecture: Brokers, ZooKeeper/KRaft, Controller",
+              "completed": false
+            },
+            {
+              "id": "topic-kafka-3",
+              "title": "Topics: Partitions, Replication Factor, Retention",
+              "completed": false
+            },
+            {
+              "id": "topic-kafka-4",
+              "title": "Producers: Partitioning, Acknowledgments, Idempotence",
+              "completed": false
+            },
+            {
+              "id": "topic-kafka-5",
+              "title": "Consumers: Consumer Groups, Offsets, Rebalancing",
+              "completed": false
+            },
+            {
+              "id": "topic-kafka-6",
+              "title": "Kafka Connect: Source and Sink Connectors",
+              "completed": false
+            },
+            {
+              "id": "topic-kafka-7",
+              "title": "Schema Registry: Avro, JSON Schema, Protobuf",
+              "completed": false
+            },
+            {
+              "id": "topic-kafka-8",
+              "title": "Kafka Streams: Stateless and Stateful Operations",
+              "completed": false
+            },
+            {
+              "id": "topic-kafka-9",
+              "title": "Kafka Security: SSL, SASL, ACLs",
+              "completed": false
+            }
           ],
+          "tasks": [
+            {
+              "id": "task-kafka-1",
+              "title": "Set up Kafka cluster locally with Docker Compose",
+              "completed": false
+            },
+            {
+              "id": "task-kafka-2",
+              "title": "Create topic with multiple partitions and test replication",
+              "completed": false
+            },
+            {
+              "id": "task-kafka-3",
+              "title": "Build Python producer that sends JSON events",
+              "completed": false
+            },
+            {
+              "id": "task-kafka-4",
+              "title": "Build consumer with proper offset management",
+              "completed": false
+            },
+            {
+              "id": "task-kafka-5",
+              "title": "Set up Schema Registry and use Avro serialization",
+              "completed": false
+            },
+            {
+              "id": "task-kafka-6",
+              "title": "Configure Kafka Connect to sync from PostgreSQL to Kafka",
+              "completed": false
+            },
+            {
+              "id": "task-kafka-7",
+              "title": "Build simple Kafka Streams application for aggregation",
+              "completed": false
+            }
+          ],
+          "attachments": [],
           "why": "Kafka is the backbone of real-time data architectures. Understanding event streaming opens up a whole new world of use cases - real-time analytics, event-driven systems, CDC.",
           "how": "Run Kafka locally with Docker. Build a producer that generates events, consume them with Python, and build a simple streaming pipeline.",
           "order": 1
@@ -187,13 +865,80 @@
           "id": "stream-processing",
           "title": "Stream Processing",
           "topics": [
-            "Stream processing patterns",
-            "Apache Flink basics",
-            "Spark Structured Streaming",
-            "Windowing and watermarks",
-            "Exactly-once semantics",
-            "Real-time vs near-real-time"
+            {
+              "id": "topic-stream-1",
+              "title": "Stream Processing Fundamentals: Unbounded Data, Event Time vs Processing Time",
+              "completed": false
+            },
+            {
+              "id": "topic-stream-2",
+              "title": "Apache Flink: DataStream API, Table API, State Management",
+              "completed": false
+            },
+            {
+              "id": "topic-stream-3",
+              "title": "Spark Structured Streaming: Micro-batch, Continuous Processing",
+              "completed": false
+            },
+            {
+              "id": "topic-stream-4",
+              "title": "Windowing: Tumbling, Sliding, Session Windows",
+              "completed": false
+            },
+            {
+              "id": "topic-stream-5",
+              "title": "Watermarks and Late Data Handling",
+              "completed": false
+            },
+            {
+              "id": "topic-stream-6",
+              "title": "Exactly-Once Semantics: Checkpointing, Transactions",
+              "completed": false
+            },
+            {
+              "id": "topic-stream-7",
+              "title": "State Management: RocksDB, Checkpoints, Savepoints",
+              "completed": false
+            },
+            {
+              "id": "topic-stream-8",
+              "title": "Stream-Table Duality: KSQL, Flink SQL",
+              "completed": false
+            }
           ],
+          "tasks": [
+            {
+              "id": "task-stream-1",
+              "title": "Build Spark Structured Streaming app reading from Kafka",
+              "completed": false
+            },
+            {
+              "id": "task-stream-2",
+              "title": "Implement tumbling window aggregation (events per minute)",
+              "completed": false
+            },
+            {
+              "id": "task-stream-3",
+              "title": "Handle late data with watermarks",
+              "completed": false
+            },
+            {
+              "id": "task-stream-4",
+              "title": "Write streaming data to Delta Lake with checkpointing",
+              "completed": false
+            },
+            {
+              "id": "task-stream-5",
+              "title": "Set up Flink locally and run first streaming job",
+              "completed": false
+            },
+            {
+              "id": "task-stream-6",
+              "title": "Build real-time dashboard with streaming aggregations",
+              "completed": false
+            }
+          ],
+          "attachments": [],
           "why": "Stream processing lets you react to data in real-time. From fraud detection to live dashboards, these skills command premium salaries.",
           "how": "Build a real-time analytics dashboard. Use Kafka for ingestion and Spark Streaming or Flink for processing. Aggregate metrics in tumbling windows.",
           "order": 2
@@ -202,13 +947,80 @@
           "id": "cdc-patterns",
           "title": "Change Data Capture (CDC)",
           "topics": [
-            "CDC concepts and patterns",
-            "Debezium for CDC",
-            "Log-based replication",
-            "CDC to data warehouse",
-            "Handling schema changes",
-            "CDC vs batch extraction"
+            {
+              "id": "topic-cdc-1",
+              "title": "CDC Concepts: Log-based vs Query-based vs Trigger-based",
+              "completed": false
+            },
+            {
+              "id": "topic-cdc-2",
+              "title": "Debezium Architecture: Connectors, Kafka Connect, Transforms",
+              "completed": false
+            },
+            {
+              "id": "topic-cdc-3",
+              "title": "PostgreSQL CDC: Logical Replication, pgoutput Plugin",
+              "completed": false
+            },
+            {
+              "id": "topic-cdc-4",
+              "title": "MySQL CDC: Binlog, GTID, Row-based Replication",
+              "completed": false
+            },
+            {
+              "id": "topic-cdc-5",
+              "title": "CDC Event Formats: Before/After Images, Operations",
+              "completed": false
+            },
+            {
+              "id": "topic-cdc-6",
+              "title": "Schema Evolution: Handling DDL Changes",
+              "completed": false
+            },
+            {
+              "id": "topic-cdc-7",
+              "title": "CDC to Data Warehouse: Merge Patterns, Upserts",
+              "completed": false
+            },
+            {
+              "id": "topic-cdc-8",
+              "title": "CDC Best Practices: Initial Snapshots, Monitoring, Recovery",
+              "completed": false
+            }
           ],
+          "tasks": [
+            {
+              "id": "task-cdc-1",
+              "title": "Set up Debezium with PostgreSQL connector",
+              "completed": false
+            },
+            {
+              "id": "task-cdc-2",
+              "title": "Capture INSERT/UPDATE/DELETE events and send to Kafka",
+              "completed": false
+            },
+            {
+              "id": "task-cdc-3",
+              "title": "Build consumer that applies CDC events to target database",
+              "completed": false
+            },
+            {
+              "id": "task-cdc-4",
+              "title": "Implement upsert logic for data warehouse loading",
+              "completed": false
+            },
+            {
+              "id": "task-cdc-5",
+              "title": "Handle schema changes gracefully in CDC pipeline",
+              "completed": false
+            },
+            {
+              "id": "task-cdc-6",
+              "title": "Set up monitoring for CDC lag and throughput",
+              "completed": false
+            }
+          ],
+          "attachments": [],
           "why": "CDC enables real-time data replication without impacting source systems. It's how modern companies keep data warehouses in sync with production databases.",
           "how": "Set up Debezium to capture changes from a PostgreSQL database. Stream changes through Kafka to a target database or data warehouse.",
           "order": 3
@@ -226,13 +1038,75 @@
           "id": "ml-fundamentals",
           "title": "ML Fundamentals for Data Engineers",
           "topics": [
-            "ML workflow overview",
-            "Feature engineering basics",
-            "Model training and evaluation",
-            "Data requirements for ML",
-            "Common ML pitfalls (data leakage, etc.)",
-            "Working with data scientists"
+            {
+              "id": "topic-ml-1",
+              "title": "ML Workflow: Data Collection → Feature Engineering → Training → Evaluation → Deployment",
+              "completed": false
+            },
+            {
+              "id": "topic-ml-2",
+              "title": "Feature Engineering: Encoding, Scaling, Imputation, Feature Crosses",
+              "completed": false
+            },
+            {
+              "id": "topic-ml-3",
+              "title": "Train/Validation/Test Splits: Avoiding Data Leakage",
+              "completed": false
+            },
+            {
+              "id": "topic-ml-4",
+              "title": "Model Evaluation: Accuracy, Precision, Recall, AUC-ROC",
+              "completed": false
+            },
+            {
+              "id": "topic-ml-5",
+              "title": "Common ML Pitfalls: Leakage, Overfitting, Selection Bias",
+              "completed": false
+            },
+            {
+              "id": "topic-ml-6",
+              "title": "Data Requirements: Volume, Velocity, Variety, Veracity",
+              "completed": false
+            },
+            {
+              "id": "topic-ml-7",
+              "title": "Working with Data Scientists: Communication and Collaboration",
+              "completed": false
+            },
+            {
+              "id": "topic-ml-8",
+              "title": "ML Data Pipelines: Training vs Inference Data",
+              "completed": false
+            }
           ],
+          "tasks": [
+            {
+              "id": "task-ml-1",
+              "title": "Complete Kaggle's Intro to Machine Learning course",
+              "completed": false
+            },
+            {
+              "id": "task-ml-2",
+              "title": "Build end-to-end ML pipeline: data prep → training → evaluation",
+              "completed": false
+            },
+            {
+              "id": "task-ml-3",
+              "title": "Create feature engineering pipeline with scikit-learn",
+              "completed": false
+            },
+            {
+              "id": "task-ml-4",
+              "title": "Identify and fix data leakage in a sample dataset",
+              "completed": false
+            },
+            {
+              "id": "task-ml-5",
+              "title": "Document data requirements for a predictive model",
+              "completed": false
+            }
+          ],
+          "attachments": [],
           "why": "Data engineers are increasingly asked to support ML workflows. Understanding the basics helps you build better pipelines for ML use cases and collaborate effectively.",
           "how": "Build a simple ML project end-to-end. Focus on data preparation, feature engineering, and understanding what data scientists need from you.",
           "order": 1
@@ -241,13 +1115,85 @@
           "id": "feature-stores",
           "title": "Feature Stores & ML Infrastructure",
           "topics": [
-            "Feature store concepts",
-            "Feast framework basics",
-            "Online vs offline features",
-            "Feature pipelines",
-            "Model serving basics",
-            "MLflow for experiment tracking"
+            {
+              "id": "topic-fs-1",
+              "title": "Feature Store Concepts: Feature Reuse, Consistency, Discovery",
+              "completed": false
+            },
+            {
+              "id": "topic-fs-2",
+              "title": "Feast Architecture: Feature Repository, Registry, Materialization",
+              "completed": false
+            },
+            {
+              "id": "topic-fs-3",
+              "title": "Online vs Offline Stores: Redis vs Parquet",
+              "completed": false
+            },
+            {
+              "id": "topic-fs-4",
+              "title": "Feature Pipelines: Batch and Streaming Features",
+              "completed": false
+            },
+            {
+              "id": "topic-fs-5",
+              "title": "Point-in-Time Joins: Avoiding Future Data Leakage",
+              "completed": false
+            },
+            {
+              "id": "topic-fs-6",
+              "title": "MLflow: Experiment Tracking, Model Registry, Deployment",
+              "completed": false
+            },
+            {
+              "id": "topic-fs-7",
+              "title": "Model Serving: Batch vs Real-time Inference",
+              "completed": false
+            },
+            {
+              "id": "topic-fs-8",
+              "title": "ML Monitoring: Data Drift, Model Drift, Performance Degradation",
+              "completed": false
+            }
           ],
+          "tasks": [
+            {
+              "id": "task-fs-1",
+              "title": "Install Feast and create first feature repository",
+              "completed": false
+            },
+            {
+              "id": "task-fs-2",
+              "title": "Define feature views for user and product features",
+              "completed": false
+            },
+            {
+              "id": "task-fs-3",
+              "title": "Materialize features to online store (Redis)",
+              "completed": false
+            },
+            {
+              "id": "task-fs-4",
+              "title": "Build training dataset with point-in-time correct features",
+              "completed": false
+            },
+            {
+              "id": "task-fs-5",
+              "title": "Set up MLflow for experiment tracking",
+              "completed": false
+            },
+            {
+              "id": "task-fs-6",
+              "title": "Log model parameters, metrics, and artifacts to MLflow",
+              "completed": false
+            },
+            {
+              "id": "task-fs-7",
+              "title": "Deploy model from MLflow registry as REST API",
+              "completed": false
+            }
+          ],
+          "attachments": [],
           "why": "Feature stores are becoming standard ML infrastructure. Data engineers often own this layer, making it a valuable skill for roles at ML-heavy companies.",
           "how": "Set up Feast locally. Build a feature pipeline that computes features from raw data and serves them for both training and inference.",
           "order": 2
@@ -265,13 +1211,90 @@
           "id": "infrastructure-as-code",
           "title": "Infrastructure as Code",
           "topics": [
-            "Terraform fundamentals",
-            "Managing cloud infrastructure",
-            "CI/CD for infrastructure",
-            "Docker and containerization",
-            "Kubernetes basics",
-            "GitOps practices"
+            {
+              "id": "topic-iac-1",
+              "title": "Terraform Fundamentals: Providers, Resources, State",
+              "completed": false
+            },
+            {
+              "id": "topic-iac-2",
+              "title": "Terraform Modules: Reusable Infrastructure Components",
+              "completed": false
+            },
+            {
+              "id": "topic-iac-3",
+              "title": "State Management: Remote State, Locking, Workspaces",
+              "completed": false
+            },
+            {
+              "id": "topic-iac-4",
+              "title": "Docker: Dockerfile, Multi-stage Builds, Docker Compose",
+              "completed": false
+            },
+            {
+              "id": "topic-iac-5",
+              "title": "Container Orchestration: Kubernetes Core Concepts",
+              "completed": false
+            },
+            {
+              "id": "topic-iac-6",
+              "title": "K8s for Data: Spark on K8s, Airflow on K8s",
+              "completed": false
+            },
+            {
+              "id": "topic-iac-7",
+              "title": "CI/CD: GitHub Actions, GitLab CI, Jenkins",
+              "completed": false
+            },
+            {
+              "id": "topic-iac-8",
+              "title": "GitOps: ArgoCD, Flux, Infrastructure as Code Pipeline",
+              "completed": false
+            },
+            {
+              "id": "topic-iac-9",
+              "title": "Secrets Management: HashiCorp Vault, AWS Secrets Manager",
+              "completed": false
+            }
           ],
+          "tasks": [
+            {
+              "id": "task-iac-1",
+              "title": "Create Terraform project for AWS S3 + IAM setup",
+              "completed": false
+            },
+            {
+              "id": "task-iac-2",
+              "title": "Build reusable Terraform module for data lake resources",
+              "completed": false
+            },
+            {
+              "id": "task-iac-3",
+              "title": "Set up remote state in S3 with DynamoDB locking",
+              "completed": false
+            },
+            {
+              "id": "task-iac-4",
+              "title": "Containerize ETL pipeline with Docker",
+              "completed": false
+            },
+            {
+              "id": "task-iac-5",
+              "title": "Deploy containerized app to local Kubernetes (minikube)",
+              "completed": false
+            },
+            {
+              "id": "task-iac-6",
+              "title": "Create CI/CD pipeline that deploys infrastructure changes",
+              "completed": false
+            },
+            {
+              "id": "task-iac-7",
+              "title": "Set up GitHub Actions for dbt project testing and deployment",
+              "completed": false
+            }
+          ],
+          "attachments": [],
           "why": "Senior data engineers don't click around in consoles - they codify infrastructure. IaC is essential for reliable, reproducible, and scalable data platforms.",
           "how": "Rewrite your cloud setup using Terraform. Containerize your pipelines with Docker. Set up a CI/CD pipeline that deploys infrastructure changes.",
           "order": 1
@@ -280,13 +1303,80 @@
           "id": "data-platform-design",
           "title": "Data Platform Design",
           "topics": [
-            "Data mesh concepts",
-            "Data lakehouse architecture",
-            "Metadata management",
-            "Data catalog (DataHub, Amundsen)",
-            "Cost optimization at scale",
-            "Multi-tenant architectures"
+            {
+              "id": "topic-platform-1",
+              "title": "Data Mesh: Domain Ownership, Data Products, Federated Governance",
+              "completed": false
+            },
+            {
+              "id": "topic-platform-2",
+              "title": "Data Lakehouse: Combining Lake Flexibility with Warehouse Features",
+              "completed": false
+            },
+            {
+              "id": "topic-platform-3",
+              "title": "Medallion Architecture: Bronze, Silver, Gold Layers",
+              "completed": false
+            },
+            {
+              "id": "topic-platform-4",
+              "title": "Metadata Management: Technical and Business Metadata",
+              "completed": false
+            },
+            {
+              "id": "topic-platform-5",
+              "title": "Data Catalogs: DataHub, Amundsen, OpenMetadata",
+              "completed": false
+            },
+            {
+              "id": "topic-platform-6",
+              "title": "Data Governance: Access Control, PII, GDPR Compliance",
+              "completed": false
+            },
+            {
+              "id": "topic-platform-7",
+              "title": "Cost Optimization: Right-sizing, Reserved Capacity, Auto-scaling",
+              "completed": false
+            },
+            {
+              "id": "topic-platform-8",
+              "title": "Multi-tenant Architecture: Isolation, Resource Allocation",
+              "completed": false
+            }
           ],
+          "tasks": [
+            {
+              "id": "task-platform-1",
+              "title": "Design data platform architecture for fictional company",
+              "completed": false
+            },
+            {
+              "id": "task-platform-2",
+              "title": "Create architecture diagram using draw.io or Lucidchart",
+              "completed": false
+            },
+            {
+              "id": "task-platform-3",
+              "title": "Document ADRs (Architecture Decision Records) for key choices",
+              "completed": false
+            },
+            {
+              "id": "task-platform-4",
+              "title": "Set up DataHub or OpenMetadata for metadata management",
+              "completed": false
+            },
+            {
+              "id": "task-platform-5",
+              "title": "Implement medallion architecture in Delta Lake",
+              "completed": false
+            },
+            {
+              "id": "task-platform-6",
+              "title": "Create cost estimation and optimization plan",
+              "completed": false
+            }
+          ],
+          "attachments": [],
           "why": "Understanding architecture patterns helps you make better decisions and have meaningful input on platform design. This is senior/staff engineer territory.",
           "how": "Design a data platform for a fictional company. Document architecture decisions, create diagrams, and think through scalability and cost implications.",
           "order": 2
@@ -295,13 +1385,85 @@
           "id": "reliability-observability",
           "title": "Reliability & Observability",
           "topics": [
-            "SLIs, SLOs, and SLAs for data",
-            "Pipeline monitoring and alerting",
-            "Logging best practices",
-            "Data lineage tracking",
-            "Incident management",
-            "Chaos engineering for data"
+            {
+              "id": "topic-rel-1",
+              "title": "SLIs, SLOs, SLAs: Defining Data Quality Metrics",
+              "completed": false
+            },
+            {
+              "id": "topic-rel-2",
+              "title": "Pipeline Monitoring: Latency, Throughput, Error Rates",
+              "completed": false
+            },
+            {
+              "id": "topic-rel-3",
+              "title": "Logging: Structured Logs, Log Aggregation, ELK Stack",
+              "completed": false
+            },
+            {
+              "id": "topic-rel-4",
+              "title": "Metrics: Prometheus, Grafana, Custom Metrics",
+              "completed": false
+            },
+            {
+              "id": "topic-rel-5",
+              "title": "Alerting: PagerDuty, OpsGenie, Alert Fatigue",
+              "completed": false
+            },
+            {
+              "id": "topic-rel-6",
+              "title": "Data Lineage: OpenLineage, Marquez, dbt Lineage",
+              "completed": false
+            },
+            {
+              "id": "topic-rel-7",
+              "title": "Incident Management: Runbooks, Post-mortems, On-call",
+              "completed": false
+            },
+            {
+              "id": "topic-rel-8",
+              "title": "Chaos Engineering: Testing Failure Scenarios",
+              "completed": false
+            }
           ],
+          "tasks": [
+            {
+              "id": "task-rel-1",
+              "title": "Define SLOs for data freshness and quality",
+              "completed": false
+            },
+            {
+              "id": "task-rel-2",
+              "title": "Set up Grafana dashboard for pipeline monitoring",
+              "completed": false
+            },
+            {
+              "id": "task-rel-3",
+              "title": "Implement structured logging in ETL pipeline",
+              "completed": false
+            },
+            {
+              "id": "task-rel-4",
+              "title": "Create Prometheus metrics for custom pipeline stats",
+              "completed": false
+            },
+            {
+              "id": "task-rel-5",
+              "title": "Set up alerting rules for pipeline failures",
+              "completed": false
+            },
+            {
+              "id": "task-rel-6",
+              "title": "Write runbook for common pipeline failure scenarios",
+              "completed": false
+            },
+            {
+              "id": "task-rel-7",
+              "title": "Conduct post-mortem for a simulated incident",
+              "completed": false
+            }
+          ],
+          "attachments": [],
           "why": "Production systems fail. How you handle failures, monitor systems, and maintain reliability separates good engineers from great ones.",
           "how": "Add comprehensive monitoring to your pipelines. Set up dashboards, alerts, and runbooks. Practice incident response scenarios.",
           "order": 3
@@ -310,13 +1472,80 @@
           "id": "leadership-communication",
           "title": "Technical Leadership & Communication",
           "topics": [
-            "Writing technical RFCs",
-            "Presenting to stakeholders",
-            "Mentoring junior engineers",
-            "Cross-functional collaboration",
-            "Trade-off analysis",
-            "Building team culture"
+            {
+              "id": "topic-lead-1",
+              "title": "RFC Writing: Problem Statement, Proposed Solution, Alternatives",
+              "completed": false
+            },
+            {
+              "id": "topic-lead-2",
+              "title": "Technical Presentations: Storytelling, Visuals, Audience Awareness",
+              "completed": false
+            },
+            {
+              "id": "topic-lead-3",
+              "title": "Stakeholder Management: Understanding Business Needs",
+              "completed": false
+            },
+            {
+              "id": "topic-lead-4",
+              "title": "Mentoring: Code Reviews, Pair Programming, Feedback",
+              "completed": false
+            },
+            {
+              "id": "topic-lead-5",
+              "title": "Cross-functional Collaboration: Working with DS, Analysts, Product",
+              "completed": false
+            },
+            {
+              "id": "topic-lead-6",
+              "title": "Trade-off Analysis: Cost vs Performance vs Complexity",
+              "completed": false
+            },
+            {
+              "id": "topic-lead-7",
+              "title": "Building Team Culture: Documentation, Best Practices, Standards",
+              "completed": false
+            },
+            {
+              "id": "topic-lead-8",
+              "title": "Career Growth: Building Your Brand, Networking, Public Speaking",
+              "completed": false
+            }
           ],
+          "tasks": [
+            {
+              "id": "task-lead-1",
+              "title": "Write RFC for a data platform improvement",
+              "completed": false
+            },
+            {
+              "id": "task-lead-2",
+              "title": "Present technical concept to non-technical audience",
+              "completed": false
+            },
+            {
+              "id": "task-lead-3",
+              "title": "Mentor someone junior: pair on a coding problem",
+              "completed": false
+            },
+            {
+              "id": "task-lead-4",
+              "title": "Create documentation standards for team projects",
+              "completed": false
+            },
+            {
+              "id": "task-lead-5",
+              "title": "Write blog post about a DE topic you learned",
+              "completed": false
+            },
+            {
+              "id": "task-lead-6",
+              "title": "Give a tech talk or presentation at a meetup",
+              "completed": false
+            }
+          ],
+          "attachments": [],
           "why": "Senior roles require more than technical skills. You need to influence decisions, communicate complex ideas clearly, and help others grow.",
           "how": "Write an RFC for a project you're working on. Practice explaining technical concepts to non-technical stakeholders. Mentor someone junior.",
           "order": 4
@@ -324,5 +1553,5 @@
       ]
     }
   ],
-  "lastUpdated": "2025-12-17T15:48:20.989Z"
+  "lastUpdated": "2025-12-19T08:41:11.205Z"
 }

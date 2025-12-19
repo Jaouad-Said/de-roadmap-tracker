@@ -64,14 +64,17 @@ export default function SectionCard({ section, phaseId, compact = false }: Secti
               {section.title}
             </h4>
             <div className="flex flex-wrap gap-1.5 mt-2">
-              {section.topics.slice(0, 3).map((topic, i) => (
-                <span
-                  key={i}
-                  className="px-2 py-0.5 text-xs bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded"
-                >
-                  {topic.length > 30 ? topic.substring(0, 30) + '...' : topic}
-                </span>
-              ))}
+              {section.topics.slice(0, 3).map((topic, i) => {
+                const topicTitle = typeof topic === 'string' ? topic : topic.title;
+                return (
+                  <span
+                    key={i}
+                    className="px-2 py-0.5 text-xs bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded"
+                  >
+                    {topicTitle.length > 30 ? topicTitle.substring(0, 30) + '...' : topicTitle}
+                  </span>
+                );
+              })}
               {section.topics.length > 3 && (
                 <span className="px-2 py-0.5 text-xs text-gray-500">
                   +{section.topics.length - 3} more

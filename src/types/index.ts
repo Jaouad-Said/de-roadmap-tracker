@@ -85,6 +85,33 @@ export interface Section {
   order: number;
 }
 
+// GitHub Integration Types
+export interface GitHubCommit {
+  sha: string;
+  message: string;
+  author: string;
+  date: string;
+  url: string;
+}
+
+export interface GitHubRepoData {
+  name: string;
+  description: string | null;
+  stars: number;
+  forks: number;
+  watchers: number;
+  language: string | null;
+  languages: Record<string, number>; // language -> bytes
+  topics: string[];
+  openIssues: number;
+  lastPush: string;
+  createdAt: string;
+  updatedAt: string;
+  recentCommits: GitHubCommit[];
+  readme?: string;
+  fetchedAt: string; // When we last fetched this data
+}
+
 // Project Types
 export interface ProjectTopic {
   id: string;
@@ -98,9 +125,10 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  status: 'planning' | 'in-progress' | 'completed' | 'on-hold';
+  status: 'not-started' | 'planning' | 'in-progress' | 'completed' | 'on-hold';
   githubUrl?: string;
   demoUrl?: string;
+  githubData?: GitHubRepoData; // Cached GitHub repo data
   topics: ProjectTopic[]; // Topics/skills covered in this project
   sections: string[]; // Section IDs this project relates to
   technologies: string[]; // Tech stack used
@@ -146,15 +174,31 @@ export interface ProgressData {
   lastUpdated: string;
 }
 
+// Note Templates for structured learning notes
+export type NoteTemplateType = 'blank' | 'concept' | 'tutorial' | 'troubleshooting' | 'cheatsheet' | 'review';
+
+export interface NoteTemplate {
+  id: NoteTemplateType;
+  name: string;
+  description: string;
+  content: string; // HTML template content
+}
+
 export interface Note {
   id: string;
   title: string;
   content: string;
   sectionId?: string;
+  topicId?: string; // Link to specific topic
+  linkedNotes?: string[]; // IDs of related notes
+  template?: NoteTemplateType; // Template used to create this note
   createdAt: string;
   updatedAt: string;
   images: string[];
   tags?: string[];
+  isReviewNote?: boolean; // For spaced repetition
+  nextReviewDate?: string; // When to review this note
+  reviewCount?: number; // How many times reviewed
 }
 
 export interface SectionNotes {
@@ -206,6 +250,41 @@ export interface DashboardStats {
   }[];
 }
 
+// Settings and Customization Types
+export interface UserSettings {
+  githubToken?: string; // Optional GitHub token for API
+  theme: 'light' | 'dark' | 'system';
+  accentColor: string; // Hex color for accent
+  showStreak: boolean;
+  enableSpacedRepetition: boolean;
+  dailyGoalMinutes: number;
+  defaultNoteTemplate: NoteTemplateType;
+}
+
+export interface StudySession {
+  id: string;
+  sectionId?: string;
+  topicId?: string;
+  startTime: string;
+  endTime?: string;
+  durationMinutes: number;
+  notes?: string;
+}
+
+export interface LearningStreak {
+  currentStreak: number;
+  longestStreak: number;
+  lastStudyDate: string;
+  totalStudyDays: number;
+  studySessions: StudySession[];
+}
+
+export interface SettingsData {
+  settings: UserSettings;
+  streak: LearningStreak;
+  lastUpdated: string;
+}
+
 // UI State Types
 export interface UIState {
   editMode: boolean;
@@ -214,4 +293,5 @@ export interface UIState {
   sidebarOpen: boolean;
   searchQuery: string;
   filterStatus: SectionStatus | 'all';
+  searchModalOpen?: boolean;
 }

@@ -9,21 +9,25 @@ import {
   Tag,
   Check,
   ChevronDown,
+  RefreshCw,
+  Loader2,
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import { Project, ProjectTopic } from '@/types';
+import { Project, ProjectTopic, GitHubRepoData } from '@/types';
 import { useRoadmapStore } from '@/store/useRoadmapStore';
 import { useUIStore } from '@/store/useUIStore';
 import { cn } from '@/lib/utils';
+import { fetchGitHubRepo, parseGitHubUrl } from '@/lib/github';
 
 interface ProjectEditorProps {
   project?: Project | null;
   onClose: () => void;
 }
 
-type ProjectStatus = 'planning' | 'in-progress' | 'completed' | 'on-hold';
+type ProjectStatus = 'not-started' | 'planning' | 'in-progress' | 'completed' | 'on-hold';
 
 const statusOptions: { value: ProjectStatus; label: string }[] = [
+  { value: 'not-started', label: 'Not Started' },
   { value: 'planning', label: 'Planning' },
   { value: 'in-progress', label: 'In Progress' },
   { value: 'completed', label: 'Completed' },
@@ -50,8 +54,76 @@ export default function ProjectEditor({ project, onClose }: ProjectEditorProps) 
   
   const [showSectionSelector, setShowSectionSelector] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [fetchingGitHub, setFetchingGitHub] = useState(false);
+  const [githubData, setGithubData] = useState<GitHubRepoData | null>(project?.githubData || null);
 
   const allSections = getAllSectionsWithTopics();
+
+  // Fetch GitHub data when URL changes
+  const handleFetchGitHub = async () => {
+    if (!githubUrl.trim()) {
+      showToast('Please enter a GitHub URL first', 'error');
+      return;
+    }
+
+    const parsed = parseGitHubUrl(githubUrl);
+    if (!parsed) {
+      showToast('Invalid GitHub URL format', 'error');
+      return;
+    }
+
+    setFetchingGitHub(true);
+    try {
+      const data = await fetchGitHubRepo(githubUrl);
+      if (data) {
+        setGithubData(data);
+        
+        // Auto-fill title and description if empty
+        if (!title.trim() && data.name) {
+          setTitle(data.name);
+        }
+        if (!description.trim() && data.description) {
+          setDescription(data.description);
+        }
+        
+        // Add GitHub topics as custom topics
+        if (data.topics.length > 0) {
+          const newTopics: ProjectTopic[] = data.topics
+            .filter(topic => !topics.some(t => t.title.toLowerCase() === topic.toLowerCase()))
+            .map(topic => ({
+              id: `github-${topic}-${Date.now()}`,
+              topicId: `github-${topic}`,
+              title: topic,
+              isCustom: true,
+            }));
+          
+          if (newTopics.length > 0) {
+            setTopics(prev => [...prev, ...newTopics]);
+            showToast(`Added ${newTopics.length} topic(s) from GitHub`, 'success');
+          }
+        }
+        
+        // Add languages as technologies
+        if (data.languages) {
+          const repoLangs = Object.keys(data.languages);
+          const newTechs = repoLangs.filter(lang => 
+            !technologies.some(t => t.toLowerCase() === lang.toLowerCase())
+          );
+          if (newTechs.length > 0) {
+            setTechnologies(prev => [...prev, ...newTechs]);
+          }
+        }
+        
+        showToast('GitHub data fetched successfully', 'success');
+      } else {
+        showToast('Could not fetch repository data. Check the URL or try again.', 'error');
+      }
+    } catch (error) {
+      showToast('Failed to fetch GitHub data', 'error');
+    } finally {
+      setFetchingGitHub(false);
+    }
+  };
 
   const handleAddTech = () => {
     if (techInput.trim() && !technologies.includes(techInput.trim())) {
@@ -119,6 +191,7 @@ export default function ProjectEditor({ project, onClose }: ProjectEditorProps) 
         status,
         githubUrl: githubUrl.trim() || undefined,
         demoUrl: demoUrl.trim() || undefined,
+        githubData: githubData || undefined,
         technologies,
         sections: selectedSections,
         topics,
@@ -214,13 +287,33 @@ export default function ProjectEditor({ project, onClose }: ProjectEditorProps) 
                 <Github className="w-4 h-4 inline mr-1" />
                 GitHub URL
               </label>
-              <input
-                type="url"
-                value={githubUrl}
-                onChange={(e) => setGithubUrl(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                placeholder="https://github.com/..."
-              />
+              <div className="flex gap-2">
+                <input
+                  type="url"
+                  value={githubUrl}
+                  onChange={(e) => setGithubUrl(e.target.value)}
+                  className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  placeholder="https://github.com/..."
+                />
+                <button
+                  type="button"
+                  onClick={handleFetchGitHub}
+                  disabled={fetchingGitHub || !githubUrl.trim()}
+                  className="px-3 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 disabled:opacity-50 flex items-center gap-1"
+                  title="Fetch data from GitHub (auto-fill title, description, topics, languages)"
+                >
+                  {fetchingGitHub ? (
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                  ) : (
+                    <RefreshCw className="w-4 h-4" />
+                  )}
+                </button>
+              </div>
+              {githubData && (
+                <p className="text-xs text-green-600 dark:text-green-400 mt-1">
+                  ✓ GitHub data loaded ({githubData.stars} ★, {Object.keys(githubData.languages || {}).length} languages)
+                </p>
+              )}
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">

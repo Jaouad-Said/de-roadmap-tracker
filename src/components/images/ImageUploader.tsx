@@ -85,9 +85,12 @@ export default function ImageUploader({ sectionId, onUpload }: ImageUploaderProp
     e.target.value = '';
   };
   
+  const inputId = `image-upload-${sectionId}`;
+  
   return (
     <div>
       <label
+        htmlFor={inputId}
         onDrop={handleDrop}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
@@ -118,6 +121,7 @@ export default function ImageUploader({ sectionId, onUpload }: ImageUploaderProp
           )}
         </div>
         <input
+          id={inputId}
           type="file"
           accept="image/*"
           onChange={handleFileSelect}

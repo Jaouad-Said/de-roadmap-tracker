@@ -1,4 +1,24 @@
 {
-  "projects": [],
-  "lastUpdated": "2024-01-01T00:00:00.000Z"
+  "projects": [
+    {
+      "id": "project-c9bbe544",
+      "title": "E-Commerce Analytics Warehouse",
+      "description": "",
+      "status": "planning",
+      "topics": [],
+      "sections": [
+        "sql-data-modeling"
+      ],
+      "technologies": [
+        "SQL",
+        "dbt",
+        "Data Modeling"
+      ],
+      "notes": "",
+      "images": [],
+      "createdAt": "2025-12-18T11:47:45.672Z",
+      "updatedAt": "2025-12-18T11:47:45.672Z"
+    }
+  ],
+  "lastUpdated": "2025-12-18T11:47:45.672Z"
 }
