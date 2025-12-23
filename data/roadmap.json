@@ -60,6 +60,21 @@
               "id": "topic-sql-10",
               "title": "Slowly Changing Dimensions (SCD Type 1, 2, 3)",
               "completed": false
+            },
+            {
+              "id": "topic-sql-11",
+              "title": "PL/SQL and Stored Procedures for Data Processing",
+              "completed": false
+            },
+            {
+              "id": "topic-sql-12",
+              "title": "Working with JSON/NoSQL Data in SQL (JSON functions, unstructured data)",
+              "completed": false
+            },
+            {
+              "id": "topic-sql-13",
+              "title": "Enterprise DWH: Teradata and Hive SQL Dialects",
+              "completed": false
             }
           ],
           "tasks": [
@@ -91,6 +106,16 @@
             {
               "id": "task-sql-6",
               "title": "Create PostgreSQL database with proper indexing strategy",
+              "completed": false
+            },
+            {
+              "id": "task-sql-7",
+              "title": "Practice querying JSON data and building dimensional models from unstructured sources",
+              "completed": false
+            },
+            {
+              "id": "task-sql-8",
+              "title": "Write stored procedures for ETL data validation and transformation",
               "completed": false
             }
           ],
@@ -293,94 +318,99 @@
         },
         {
           "id": "cloud-fundamentals",
-          "title": "Cloud Fundamentals (AWS/GCP/Azure)",
+          "title": "Cloud Fundamentals (Azure/GCP/AWS)",
           "topics": [
             {
               "id": "topic-cloud-1",
-              "title": "AWS Core: EC2, VPC, Security Groups, Load Balancers",
+              "title": "Azure Core: Resource Groups, Virtual Networks, Azure Active Directory",
               "completed": false
             },
             {
               "id": "topic-cloud-2",
-              "title": "S3 Deep Dive: Storage Classes, Lifecycle Policies, Versioning",
+              "title": "Azure Blob Storage: Containers, Access Tiers, Lifecycle Management",
               "completed": false
             },
             {
               "id": "topic-cloud-3",
-              "title": "IAM: Users, Roles, Policies, and Least Privilege",
+              "title": "Azure Data Lake Storage Gen2: Hierarchical Namespace, ACLs",
               "completed": false
             },
             {
               "id": "topic-cloud-4",
-              "title": "AWS CLI and boto3 Python SDK",
+              "title": "GCP Core: Projects, IAM, Cloud Storage, BigQuery Basics",
               "completed": false
             },
             {
               "id": "topic-cloud-5",
-              "title": "Lambda Functions: Triggers, Layers, Cold Starts",
+              "title": "AWS Core: EC2, VPC, S3, IAM Roles and Policies",
               "completed": false
             },
             {
               "id": "topic-cloud-6",
-              "title": "AWS Glue: Crawlers, ETL Jobs, Data Catalog",
+              "title": "S3 Deep Dive: Storage Classes, Lifecycle Policies, Versioning",
               "completed": false
             },
             {
               "id": "topic-cloud-7",
-              "title": "Athena: Querying S3 Data with SQL",
+              "title": "Cloud CLI Tools: Azure CLI, gcloud, AWS CLI",
               "completed": false
             },
             {
               "id": "topic-cloud-8",
-              "title": "Cost Management: Budgets, Cost Explorer, Reserved Instances",
+              "title": "Lambda/Azure Functions/Cloud Functions: Serverless Data Processing",
               "completed": false
             },
             {
               "id": "topic-cloud-9",
-              "title": "CloudWatch: Logs, Metrics, Alarms, Dashboards",
+              "title": "Cost Management: Budgets, Cost Explorer, Reserved Instances",
+              "completed": false
+            },
+            {
+              "id": "topic-cloud-10",
+              "title": "Monitoring: CloudWatch, Azure Monitor, Cloud Logging",
               "completed": false
             }
           ],
           "tasks": [
             {
               "id": "task-cloud-1",
-              "title": "Create AWS free tier account and set up billing alerts",
+              "title": "Create Azure free account and set up billing alerts",
               "completed": false
             },
             {
               "id": "task-cloud-2",
-              "title": "Build data lake structure in S3 (raw/processed/curated layers)",
+              "title": "Build data lake structure in Azure Blob/ADLS (raw/processed/curated layers)",
               "completed": false
             },
             {
               "id": "task-cloud-3",
-              "title": "Create IAM role for Lambda with S3 read/write permissions",
+              "title": "Create GCP project with BigQuery sandbox for analytics",
               "completed": false
             },
             {
               "id": "task-cloud-4",
-              "title": "Deploy Lambda function triggered by S3 file upload",
+              "title": "Deploy Azure Function triggered by blob upload",
               "completed": false
             },
             {
               "id": "task-cloud-5",
-              "title": "Set up Glue Crawler to catalog S3 data automatically",
+              "title": "Build AWS S3 data lake with proper IAM roles",
               "completed": false
             },
             {
               "id": "task-cloud-6",
-              "title": "Query S3 data using Athena and save results",
+              "title": "Query cloud storage data using serverless SQL (Athena/BigQuery)",
               "completed": false
             },
             {
               "id": "task-cloud-7",
-              "title": "Create CloudWatch dashboard for Lambda metrics",
+              "title": "Create monitoring dashboard for cloud resources",
               "completed": false
             }
           ],
           "attachments": [],
-          "why": "Modern data engineering lives in the cloud. Understanding cloud services is non-negotiable - you'll provision infrastructure, manage data lakes, and deploy pipelines on cloud platforms.",
-          "how": "Pick one cloud (AWS recommended for jobs). Get free tier, build a data lake with S3, set up IAM roles properly, and deploy a Lambda function that processes files.",
+          "why": "Modern data engineering lives in the cloud. Azure is particularly in-demand in the job market, alongside GCP and AWS. Understanding multi-cloud is a strong differentiator.",
+          "how": "Start with Azure (high market demand). Get free tier, build a data lake with Blob Storage/ADLS, set up IAM properly, and deploy serverless functions that process files.",
           "order": 4
         }
       ]
@@ -393,8 +423,105 @@
       "order": 2,
       "sections": [
         {
+          "id": "azure-data-platform",
+          "title": "Azure Data Platform",
+          "topics": [
+            {
+              "id": "topic-azure-1",
+              "title": "Azure Data Factory: Pipelines, Datasets, Linked Services, Integration Runtime",
+              "completed": false
+            },
+            {
+              "id": "topic-azure-2",
+              "title": "ADF Activities: Copy, Data Flow, Mapping Data Flows, Custom Activities",
+              "completed": false
+            },
+            {
+              "id": "topic-azure-3",
+              "title": "Azure Databricks: Workspace, Clusters, Notebooks, Unity Catalog",
+              "completed": false
+            },
+            {
+              "id": "topic-azure-4",
+              "title": "Databricks Delta Lake: ACID Transactions, Time Travel, OPTIMIZE",
+              "completed": false
+            },
+            {
+              "id": "topic-azure-5",
+              "title": "Azure Synapse Analytics: Dedicated/Serverless SQL Pools, Spark Pools",
+              "completed": false
+            },
+            {
+              "id": "topic-azure-6",
+              "title": "Synapse Pipelines: Integration with ADF, Orchestration Patterns",
+              "completed": false
+            },
+            {
+              "id": "topic-azure-7",
+              "title": "Azure SQL Database and Managed Instance for Data Engineering",
+              "completed": false
+            },
+            {
+              "id": "topic-azure-8",
+              "title": "Azure DevOps: CI/CD for Data Pipelines, Git Integration",
+              "completed": false
+            },
+            {
+              "id": "topic-azure-9",
+              "title": "Medallion Architecture on Azure: Bronze, Silver, Gold Layers",
+              "completed": false
+            },
+            {
+              "id": "topic-azure-10",
+              "title": "Azure Purview/Microsoft Purview: Data Catalog and Governance",
+              "completed": false
+            }
+          ],
+          "tasks": [
+            {
+              "id": "task-azure-1",
+              "title": "Create Azure Data Factory pipeline with parameterized datasets",
+              "completed": false
+            },
+            {
+              "id": "task-azure-2",
+              "title": "Build ETL pipeline: Blob Storage → Data Factory → SQL Database",
+              "completed": false
+            },
+            {
+              "id": "task-azure-3",
+              "title": "Set up Azure Databricks workspace and run PySpark notebook",
+              "completed": false
+            },
+            {
+              "id": "task-azure-4",
+              "title": "Implement medallion architecture in Databricks with Delta Lake",
+              "completed": false
+            },
+            {
+              "id": "task-azure-5",
+              "title": "Create Synapse workspace and query data lake with serverless SQL",
+              "completed": false
+            },
+            {
+              "id": "task-azure-6",
+              "title": "Set up CI/CD pipeline for ADF using Azure DevOps",
+              "completed": false
+            },
+            {
+              "id": "task-azure-7",
+              "title": "Build end-to-end pipeline: API → ADLS → Databricks → Synapse → Power BI",
+              "completed": false
+            }
+          ],
+          "attachments": [],
+          "why": "Azure is extremely prominent in the job market. Azure Data Factory, Databricks, and Synapse are mentioned in nearly every job posting. This is a must-have skill set.",
+          "how": "Get Azure free account. Build a complete data pipeline using ADF for orchestration, Databricks for transformation, and Synapse for serving analytics. Connect to Power BI.",
+          "order": 1
+        },
+        {
           "id": "workflow-orchestration",
-          "title": "Workflow Orchestration",
+          "title": "Workflow Orchestration (Airflow & dbt)",
           "topics": [
             {
               "id": "topic-orch-1",
@@ -438,6 +565,31 @@
             },
             {
               "id": "topic-orch-9",
+              "title": "dbt Core: Models, Sources, Refs, Macros, Jinja Templating",
+              "completed": false
+            },
+            {
+              "id": "topic-orch-10",
+              "title": "dbt Testing: Schema Tests, Custom Tests, Data Freshness",
+              "completed": false
+            },
+            {
+              "id": "topic-orch-11",
+              "title": "dbt Documentation: YAML, Docs Blocks, Lineage Graphs",
+              "completed": false
+            },
+            {
+              "id": "topic-orch-12",
+              "title": "Integrating Airflow + dbt: Astronomer Cosmos, dbt Cloud API",
+              "completed": false
+            },
+            {
+              "id": "topic-orch-13",
+              "title": "Cloud-Managed Orchestration: GCP Composer, AWS MWAA",
+              "completed": false
+            },
+            {
+              "id": "topic-orch-14",
               "title": "Modern Alternatives: Prefect, Dagster, Mage Comparison",
               "completed": false
             }
@@ -470,23 +622,33 @@
             },
             {
               "id": "task-orch-6",
-              "title": "Create dynamic DAG using Jinja templating",
+              "title": "Install dbt-core and initialize project connected to Snowflake/BigQuery",
               "completed": false
             },
             {
               "id": "task-orch-7",
-              "title": "Implement sensor to wait for file arrival",
+              "title": "Build staging and mart models with proper dbt testing",
+              "completed": false
+            },
+            {
+              "id": "task-orch-8",
+              "title": "Integrate dbt runs into Airflow DAG",
+              "completed": false
+            },
+            {
+              "id": "task-orch-9",
+              "title": "Generate and publish dbt documentation site",
               "completed": false
             }
           ],
           "attachments": [],
-          "why": "Orchestration is how you make pipelines run automatically, handle failures, and maintain dependencies. Airflow is the industry standard and appears in almost every job description.",
-          "how": "Install Airflow locally with Docker. Build a DAG that orchestrates your ETL pipeline from Phase 1. Add error handling, retries, and email alerts.",
-          "order": 1
+          "why": "Airflow and dbt are the industry standard combo appearing in almost every job description. Mastering both together is essential for modern data engineering.",
+          "how": "Install Airflow locally with Docker. Build a DAG that orchestrates your ETL pipeline. Add dbt for transformations with proper testing and documentation.",
+          "order": 2
         },
         {
           "id": "batch-processing",
-          "title": "Batch Data Processing",
+          "title": "Big Data Processing (Spark/Hadoop)",
           "topics": [
             {
               "id": "topic-batch-1",
@@ -520,17 +682,32 @@
             },
             {
               "id": "topic-batch-7",
-              "title": "Spark on Cloud: EMR, Dataproc, Databricks",
+              "title": "Spark on Cloud: EMR, Dataproc, Azure Databricks",
               "completed": false
             },
             {
               "id": "topic-batch-8",
-              "title": "Delta Lake: ACID Transactions, Time Travel, Z-Ordering",
+              "title": "Delta Lake: ACID Transactions, Time Travel, Z-Ordering, OPTIMIZE",
               "completed": false
             },
             {
               "id": "topic-batch-9",
-              "title": "Apache Iceberg: Table Format, Schema Evolution",
+              "title": "Apache Iceberg & Hudi: Open Table Formats, Schema Evolution",
+              "completed": false
+            },
+            {
+              "id": "topic-batch-10",
+              "title": "Scala for Spark: Basics, Case Classes, Collections, Type Safety",
+              "completed": false
+            },
+            {
+              "id": "topic-batch-11",
+              "title": "Hadoop Ecosystem: HDFS, YARN, Hive, MapReduce Concepts",
+              "completed": false
+            },
+            {
+              "id": "topic-batch-12",
+              "title": "File Formats: Parquet, ORC, Avro, Delta - When to Use Each",
               "completed": false
             }
           ],
@@ -557,28 +734,33 @@
             },
             {
               "id": "task-batch-5",
-              "title": "Implement partitioned write to Delta Lake",
+              "title": "Implement partitioned write to Delta Lake with Z-Ordering",
               "completed": false
             },
             {
               "id": "task-batch-6",
-              "title": "Set up Spark job on EMR or Databricks Community Edition",
+              "title": "Set up Spark job on Azure Databricks or EMR",
               "completed": false
             },
             {
               "id": "task-batch-7",
-              "title": "Compare Spark vs Pandas performance on large dataset",
+              "title": "Learn Scala basics and rewrite a PySpark job in Scala",
+              "completed": false
+            },
+            {
+              "id": "task-batch-8",
+              "title": "Query Hive tables and understand Hadoop file system concepts",
               "completed": false
             }
           ],
           "attachments": [],
-          "why": "When datasets get big, single-machine Python won't cut it. Spark lets you process terabytes of data efficiently. It's essential for any company with serious data volumes.",
-          "how": "Set up Spark locally or on cloud. Rewrite your previous ETL to use PySpark. Process a large public dataset (NYC taxi data is great) and compare performance.",
-          "order": 2
+          "why": "PySpark is the #1 in-demand skill for data engineers. Many job offers also mention Scala, Hadoop, and Hive. Understanding the full big data ecosystem is crucial.",
+          "how": "Set up Spark locally or on Databricks. Process large datasets with PySpark. Learn enough Scala to read/write Spark code. Understand Hive and Hadoop concepts.",
+          "order": 3
         },
         {
           "id": "data-warehousing",
-          "title": "Data Warehousing",
+          "title": "Cloud Data Warehousing (Snowflake Focus)",
           "topics": [
             {
               "id": "topic-dw-1",
@@ -587,91 +769,101 @@
             },
             {
               "id": "topic-dw-2",
-              "title": "Snowflake: Virtual Warehouses, Time Travel, Zero-Copy Cloning",
+              "title": "Snowflake Architecture: Virtual Warehouses, Storage, Cloud Services",
               "completed": false
             },
             {
               "id": "topic-dw-3",
-              "title": "BigQuery: Slots, Partitioning, Clustering, Materialized Views",
+              "title": "Snowflake Features: Time Travel, Zero-Copy Cloning, Data Sharing",
               "completed": false
             },
             {
               "id": "topic-dw-4",
-              "title": "ELT vs ETL: When to Transform",
+              "title": "Snowflake Performance: Clustering, Materialized Views, Query Optimization",
               "completed": false
             },
             {
               "id": "topic-dw-5",
-              "title": "dbt Fundamentals: Models, Sources, Refs, Macros",
+              "title": "Snowflake Data Loading: COPY INTO, Snowpipe, External Tables",
               "completed": false
             },
             {
               "id": "topic-dw-6",
-              "title": "dbt Testing: Schema Tests, Custom Tests, Data Freshness",
+              "title": "BigQuery: Slots, Partitioning, Clustering, Materialized Views",
               "completed": false
             },
             {
               "id": "topic-dw-7",
-              "title": "dbt Documentation: YAML, Docs Blocks, Lineage Graphs",
+              "title": "Azure Synapse: Dedicated/Serverless SQL Pools, Distribution",
               "completed": false
             },
             {
               "id": "topic-dw-8",
-              "title": "Slowly Changing Dimensions: Implementation Patterns",
+              "title": "Redshift: Node Types, Distribution Styles, Sort Keys",
               "completed": false
             },
             {
               "id": "topic-dw-9",
-              "title": "Warehouse Optimization: Clustering, Partitioning, Materialization",
+              "title": "ELT vs ETL: Modern Transformation Patterns",
+              "completed": false
+            },
+            {
+              "id": "topic-dw-10",
+              "title": "Slowly Changing Dimensions: Implementation Patterns in Cloud DW",
+              "completed": false
+            },
+            {
+              "id": "topic-dw-11",
+              "title": "Data Lakehouse: Combining Lake Flexibility with Warehouse Features",
               "completed": false
             }
           ],
           "tasks": [
             {
               "id": "task-dw-1",
-              "title": "Create free Snowflake trial or BigQuery sandbox",
+              "title": "Create free Snowflake trial account and explore the UI",
               "completed": false
             },
             {
               "id": "task-dw-2",
-              "title": "Load sample data and create raw/staging/mart layers",
+              "title": "Load sample data using COPY INTO from cloud storage",
               "completed": false
             },
             {
               "id": "task-dw-3",
-              "title": "Install dbt-core and initialize project",
+              "title": "Set up Snowpipe for automated data ingestion",
               "completed": false
             },
             {
               "id": "task-dw-4",
-              "title": "Build staging models with source freshness tests",
+              "title": "Create raw/staging/mart layers in Snowflake",
               "completed": false
             },
             {
               "id": "task-dw-5",
-              "title": "Create dimensional model (fact + dimension tables) in dbt",
+              "title": "Implement Time Travel queries and Zero-Copy Cloning",
               "completed": false
             },
             {
               "id": "task-dw-6",
-              "title": "Add schema tests: unique, not_null, accepted_values",
+              "title": "Optimize slow queries using clustering and materialized views",
               "completed": false
             },
             {
               "id": "task-dw-7",
-              "title": "Generate and publish dbt documentation site",
+              "title": "Connect dbt to Snowflake and build transformation models",
               "completed": false
             },
             {
               "id": "task-dw-8",
-              "title": "Implement incremental model with merge strategy",
+              "title": "Compare Snowflake vs BigQuery for a sample workload",
               "completed": false
             }
           ],
           "attachments": [],
-          "why": "Data warehouses are where your transformed data lives for analytics. dbt has revolutionized how we think about transformations. These skills are in extremely high demand.",
-          "how": "Get a free Snowflake or BigQuery account. Load data, build dbt models with proper testing and documentation. Create a star schema for analytics.",
-          "order": 3
+          "why": "Snowflake is the most mentioned cloud data warehouse in job postings. Understanding its unique features plus alternatives like BigQuery and Synapse makes you versatile.",
+          "how": "Get a free Snowflake trial. Load data, explore Time Travel and cloning. Build a complete analytics pipeline with dbt transformations.",
+          "order": 4
         },
         {
           "id": "data-quality",
@@ -1029,10 +1221,280 @@
     },
     {
       "id": "phase-4",
-      "title": "ML Engineering Basics",
+      "title": "BI, Visualization & Analytics",
       "duration": "1-2 months",
-      "description": "Understand the data science workflow and how to support ML systems in production. You don't need to build models, but you need to enable those who do.",
+      "description": "Master Business Intelligence tools and data visualization. Power BI is extremely in-demand. Learn to transform data into actionable insights and compelling dashboards.",
       "order": 4,
+      "sections": [
+        {
+          "id": "power-bi",
+          "title": "Power BI & Data Visualization",
+          "topics": [
+            {
+              "id": "topic-pbi-1",
+              "title": "Power BI Architecture: Desktop, Service, Gateway, Dataflows",
+              "completed": false
+            },
+            {
+              "id": "topic-pbi-2",
+              "title": "Data Modeling: Star Schema, Relationships, Cardinality",
+              "completed": false
+            },
+            {
+              "id": "topic-pbi-3",
+              "title": "DAX Fundamentals: CALCULATE, FILTER, ALL, Context Transition",
+              "completed": false
+            },
+            {
+              "id": "topic-pbi-4",
+              "title": "Advanced DAX: Time Intelligence, Variables, Iterator Functions",
+              "completed": false
+            },
+            {
+              "id": "topic-pbi-5",
+              "title": "Power Query (M Language): ETL, Data Transformation, Custom Functions",
+              "completed": false
+            },
+            {
+              "id": "topic-pbi-6",
+              "title": "Visualization Best Practices: Chart Selection, Storytelling with Data",
+              "completed": false
+            },
+            {
+              "id": "topic-pbi-7",
+              "title": "Report Design: Filters, Slicers, Drill-through, Bookmarks",
+              "completed": false
+            },
+            {
+              "id": "topic-pbi-8",
+              "title": "Performance Optimization: Query Folding, Aggregations, Composite Models",
+              "completed": false
+            },
+            {
+              "id": "topic-pbi-9",
+              "title": "Power BI Service: Workspaces, Apps, Row-Level Security (RLS)",
+              "completed": false
+            },
+            {
+              "id": "topic-pbi-10",
+              "title": "Integration: DirectQuery, Import, Live Connection to Azure/Snowflake",
+              "completed": false
+            },
+            {
+              "id": "topic-pbi-11",
+              "title": "Alternative Tools: Qlik Sense, Looker, Tableau Comparison",
+              "completed": false
+            }
+          ],
+          "tasks": [
+            {
+              "id": "task-pbi-1",
+              "title": "Install Power BI Desktop and connect to sample data",
+              "completed": false
+            },
+            {
+              "id": "task-pbi-2",
+              "title": "Build star schema data model with proper relationships",
+              "completed": false
+            },
+            {
+              "id": "task-pbi-3",
+              "title": "Create calculated columns and measures using DAX",
+              "completed": false
+            },
+            {
+              "id": "task-pbi-4",
+              "title": "Build time intelligence measures (YTD, YoY, Rolling Average)",
+              "completed": false
+            },
+            {
+              "id": "task-pbi-5",
+              "title": "Design interactive dashboard with drill-through and bookmarks",
+              "completed": false
+            },
+            {
+              "id": "task-pbi-6",
+              "title": "Connect Power BI to Snowflake/Azure SQL and build live report",
+              "completed": false
+            },
+            {
+              "id": "task-pbi-7",
+              "title": "Publish report to Power BI Service and set up scheduled refresh",
+              "completed": false
+            },
+            {
+              "id": "task-pbi-8",
+              "title": "Implement Row-Level Security for multi-tenant reporting",
+              "completed": false
+            }
+          ],
+          "attachments": [],
+          "why": "Power BI is mentioned in almost every job posting. Data engineers increasingly need to bridge the gap between data pipelines and business insights.",
+          "how": "Master Power BI Desktop first. Build dashboards connected to your data warehouse. Learn DAX deeply - it's the key to advanced analytics.",
+          "order": 1
+        },
+        {
+          "id": "ssis-etl",
+          "title": "SSIS & Microsoft ETL Stack",
+          "topics": [
+            {
+              "id": "topic-ssis-1",
+              "title": "SSIS Architecture: Control Flow, Data Flow, Event Handlers",
+              "completed": false
+            },
+            {
+              "id": "topic-ssis-2",
+              "title": "Data Flow Components: Sources, Transformations, Destinations",
+              "completed": false
+            },
+            {
+              "id": "topic-ssis-3",
+              "title": "SSIS Transformations: Lookup, Merge Join, Conditional Split, Derived Column",
+              "completed": false
+            },
+            {
+              "id": "topic-ssis-4",
+              "title": "Package Configuration: Variables, Parameters, Expressions",
+              "completed": false
+            },
+            {
+              "id": "topic-ssis-5",
+              "title": "Error Handling: Logging, Event Handlers, Checkpoints",
+              "completed": false
+            },
+            {
+              "id": "topic-ssis-6",
+              "title": "SSIS Catalog: Deployment, Execution, Monitoring",
+              "completed": false
+            },
+            {
+              "id": "topic-ssis-7",
+              "title": "Performance Tuning: Buffer Sizing, Parallel Execution, Data Types",
+              "completed": false
+            },
+            {
+              "id": "topic-ssis-8",
+              "title": "Modern Migration: SSIS to Azure Data Factory",
+              "completed": false
+            }
+          ],
+          "tasks": [
+            {
+              "id": "task-ssis-1",
+              "title": "Install SQL Server Data Tools (SSDT) and create first SSIS project",
+              "completed": false
+            },
+            {
+              "id": "task-ssis-2",
+              "title": "Build ETL package: Extract from CSV, Transform, Load to SQL Server",
+              "completed": false
+            },
+            {
+              "id": "task-ssis-3",
+              "title": "Implement SCD Type 2 using SSIS Slowly Changing Dimension transform",
+              "completed": false
+            },
+            {
+              "id": "task-ssis-4",
+              "title": "Create package with proper error handling and logging",
+              "completed": false
+            },
+            {
+              "id": "task-ssis-5",
+              "title": "Deploy package to SSIS Catalog and schedule execution",
+              "completed": false
+            },
+            {
+              "id": "task-ssis-6",
+              "title": "Migrate SSIS package to Azure Data Factory using IR",
+              "completed": false
+            }
+          ],
+          "attachments": [],
+          "why": "SSIS remains widely used in enterprise environments. Understanding it shows versatility and helps with migration projects to modern cloud ETL.",
+          "how": "Install SSDT. Build classic ETL packages for data warehouse loading. Practice migrating SSIS logic to Azure Data Factory.",
+          "order": 2
+        },
+        {
+          "id": "analytics-engineering",
+          "title": "Analytics Engineering & Business Metrics",
+          "topics": [
+            {
+              "id": "topic-ae-1",
+              "title": "Analytics Engineering Role: Bridging Data Engineering and Analytics",
+              "completed": false
+            },
+            {
+              "id": "topic-ae-2",
+              "title": "Semantic Layer: Metrics, Dimensions, Business Logic",
+              "completed": false
+            },
+            {
+              "id": "topic-ae-3",
+              "title": "dbt Metrics: Defining Reusable Business Metrics",
+              "completed": false
+            },
+            {
+              "id": "topic-ae-4",
+              "title": "Data Storytelling: Translating Data into Business Insights",
+              "completed": false
+            },
+            {
+              "id": "topic-ae-5",
+              "title": "Understanding Business Domains: Finance, Marketing, Sales KPIs",
+              "completed": false
+            },
+            {
+              "id": "topic-ae-6",
+              "title": "Stakeholder Communication: Requirements Gathering, Documentation",
+              "completed": false
+            },
+            {
+              "id": "topic-ae-7",
+              "title": "Self-Service Analytics: Enabling Business Users",
+              "completed": false
+            }
+          ],
+          "tasks": [
+            {
+              "id": "task-ae-1",
+              "title": "Define key business metrics for a sample e-commerce dataset",
+              "completed": false
+            },
+            {
+              "id": "task-ae-2",
+              "title": "Create semantic layer with dbt exposures and metrics",
+              "completed": false
+            },
+            {
+              "id": "task-ae-3",
+              "title": "Build executive dashboard answering key business questions",
+              "completed": false
+            },
+            {
+              "id": "task-ae-4",
+              "title": "Document data models for business stakeholders",
+              "completed": false
+            },
+            {
+              "id": "task-ae-5",
+              "title": "Present data insights to non-technical audience",
+              "completed": false
+            }
+          ],
+          "attachments": [],
+          "why": "Job postings emphasize understanding business needs and collaborating with stakeholders. Analytics engineering bridges the gap between data and business value.",
+          "how": "Learn to think like a business analyst. Understand common KPIs. Practice translating business requirements into data solutions.",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "phase-5",
+      "title": "ML Engineering & GenAI",
+      "duration": "1-2 months",
+      "description": "Understand ML workflows, support ML systems in production, and leverage Generative AI for data engineering tasks. AI skills are increasingly mentioned in job postings.",
+      "order": 5,
       "sections": [
         {
           "id": "ml-fundamentals",
@@ -1112,8 +1574,90 @@
           "order": 1
         },
         {
+          "id": "genai-data-engineering",
+          "title": "Generative AI for Data Engineering",
+          "topics": [
+            {
+              "id": "topic-genai-1",
+              "title": "LLM Fundamentals: Transformers, Tokens, Context Windows, Embeddings",
+              "completed": false
+            },
+            {
+              "id": "topic-genai-2",
+              "title": "Azure OpenAI: GPT Models, Deployment, API Usage",
+              "completed": false
+            },
+            {
+              "id": "topic-genai-3",
+              "title": "Copilot for Data: GitHub Copilot, Azure Copilot, Fabric Copilot",
+              "completed": false
+            },
+            {
+              "id": "topic-genai-4",
+              "title": "RAG (Retrieval-Augmented Generation): Vector Stores, Embeddings, Chunking",
+              "completed": false
+            },
+            {
+              "id": "topic-genai-5",
+              "title": "Data Quality with AI: Anomaly Detection, Data Validation, Enrichment",
+              "completed": false
+            },
+            {
+              "id": "topic-genai-6",
+              "title": "Automating Data Tasks: Code Generation, Documentation, SQL Writing",
+              "completed": false
+            },
+            {
+              "id": "topic-genai-7",
+              "title": "LLM Data Pipelines: Text Processing, Summarization, Classification",
+              "completed": false
+            },
+            {
+              "id": "topic-genai-8",
+              "title": "Vector Databases: Pinecone, Weaviate, Azure AI Search",
+              "completed": false
+            }
+          ],
+          "tasks": [
+            {
+              "id": "task-genai-1",
+              "title": "Set up Azure OpenAI and make first API call",
+              "completed": false
+            },
+            {
+              "id": "task-genai-2",
+              "title": "Build data pipeline that uses LLM for text classification",
+              "completed": false
+            },
+            {
+              "id": "task-genai-3",
+              "title": "Create RAG system for querying documentation",
+              "completed": false
+            },
+            {
+              "id": "task-genai-4",
+              "title": "Use Copilot to accelerate SQL and Python development",
+              "completed": false
+            },
+            {
+              "id": "task-genai-5",
+              "title": "Build data enrichment pipeline using LLM for entity extraction",
+              "completed": false
+            },
+            {
+              "id": "task-genai-6",
+              "title": "Implement vector search for semantic data discovery",
+              "completed": false
+            }
+          ],
+          "attachments": [],
+          "why": "Job postings increasingly mention GenAI, Azure OpenAI, and Copilot. Understanding how to leverage AI for data tasks is becoming a differentiator.",
+          "how": "Start with Azure OpenAI. Build practical applications that enhance data pipelines. Focus on RAG for enterprise knowledge management.",
+          "order": 2
+        },
+        {
           "id": "feature-stores",
-          "title": "Feature Stores & ML Infrastructure",
+          "title": "Feature Stores & MLOps",
           "topics": [
             {
               "id": "topic-fs-1",
@@ -1196,20 +1740,107 @@
           "attachments": [],
           "why": "Feature stores are becoming standard ML infrastructure. Data engineers often own this layer, making it a valuable skill for roles at ML-heavy companies.",
           "how": "Set up Feast locally. Build a feature pipeline that computes features from raw data and serves them for both training and inference.",
-          "order": 2
+          "order": 3
         }
       ]
     },
     {
-      "id": "phase-5",
+      "id": "phase-6",
       "title": "Scale & Production Excellence",
       "duration": "Ongoing",
-      "description": "Level up to senior engineer territory. Focus on building reliable, scalable systems and leading technical decisions.",
-      "order": 5,
+      "description": "Level up to senior engineer territory. Focus on building reliable, scalable systems, data governance, and leading technical decisions.",
+      "order": 6,
       "sections": [
         {
+          "id": "data-governance",
+          "title": "Data Governance & Security",
+          "topics": [
+            {
+              "id": "topic-gov-1",
+              "title": "Data Governance Framework: Policies, Standards, Stewardship",
+              "completed": false
+            },
+            {
+              "id": "topic-gov-2",
+              "title": "Data Quality: DQ Dimensions, Monitoring, Remediation",
+              "completed": false
+            },
+            {
+              "id": "topic-gov-3",
+              "title": "Data Lineage: OpenLineage, Marquez, dbt Lineage, Purview",
+              "completed": false
+            },
+            {
+              "id": "topic-gov-4",
+              "title": "Data Catalogs: DataHub, Amundsen, OpenMetadata, Microsoft Purview",
+              "completed": false
+            },
+            {
+              "id": "topic-gov-5",
+              "title": "PII Protection: Data Masking, Tokenization, Encryption",
+              "completed": false
+            },
+            {
+              "id": "topic-gov-6",
+              "title": "Privacy Compliance: GDPR, Data Retention, Right to be Forgotten",
+              "completed": false
+            },
+            {
+              "id": "topic-gov-7",
+              "title": "Access Control: RBAC, Column-Level Security, Row-Level Security",
+              "completed": false
+            },
+            {
+              "id": "topic-gov-8",
+              "title": "Data Contracts: Schema Definitions, SLAs, Breaking Change Management",
+              "completed": false
+            },
+            {
+              "id": "topic-gov-9",
+              "title": "Audit and Compliance: Logging, Monitoring, Reporting",
+              "completed": false
+            }
+          ],
+          "tasks": [
+            {
+              "id": "task-gov-1",
+              "title": "Set up DataHub or OpenMetadata for metadata management",
+              "completed": false
+            },
+            {
+              "id": "task-gov-2",
+              "title": "Implement data lineage tracking in your pipelines",
+              "completed": false
+            },
+            {
+              "id": "task-gov-3",
+              "title": "Create data quality checks with automated alerting",
+              "completed": false
+            },
+            {
+              "id": "task-gov-4",
+              "title": "Implement PII detection and masking pipeline",
+              "completed": false
+            },
+            {
+              "id": "task-gov-5",
+              "title": "Design RBAC model for multi-tenant data platform",
+              "completed": false
+            },
+            {
+              "id": "task-gov-6",
+              "title": "Create data contract documentation for key datasets",
+              "completed": false
+            }
+          ],
+          "attachments": [],
+          "why": "Data governance, security, and compliance are mentioned in every senior job posting. Companies need engineers who ensure data is secure, compliant, and trustworthy.",
+          "how": "Set up a data catalog. Implement lineage tracking. Design access controls and PII handling for your data platform.",
+          "order": 1
+        },
+        {
           "id": "infrastructure-as-code",
-          "title": "Infrastructure as Code",
+          "title": "Infrastructure as Code & DevOps",
           "topics": [
             {
               "id": "topic-iac-1",
@@ -1295,9 +1926,9 @@
             }
           ],
           "attachments": [],
-          "why": "Senior data engineers don't click around in consoles - they codify infrastructure. IaC is essential for reliable, reproducible, and scalable data platforms.",
-          "how": "Rewrite your cloud setup using Terraform. Containerize your pipelines with Docker. Set up a CI/CD pipeline that deploys infrastructure changes.",
-          "order": 1
+          "why": "Senior data engineers don't click around in consoles - they codify infrastructure. Docker, K8s, Terraform, and CI/CD are mentioned in every senior role.",
+          "how": "Rewrite your cloud setup using Terraform. Containerize your pipelines with Docker. Set up a CI/CD pipeline with GitHub Actions or Azure DevOps.",
+          "order": 2
         },
         {
           "id": "data-platform-design",
@@ -1377,9 +2008,9 @@
             }
           ],
           "attachments": [],
-          "why": "Understanding architecture patterns helps you make better decisions and have meaningful input on platform design. This is senior/staff engineer territory.",
+          "why": "Understanding architecture patterns helps you make better decisions and have meaningful input on platform design. Data Mesh is increasingly mentioned in job postings.",
           "how": "Design a data platform for a fictional company. Document architecture decisions, create diagrams, and think through scalability and cost implications.",
-          "order": 2
+          "order": 3
         },
         {
           "id": "reliability-observability",
@@ -1466,7 +2097,7 @@
           "attachments": [],
           "why": "Production systems fail. How you handle failures, monitor systems, and maintain reliability separates good engineers from great ones.",
           "how": "Add comprehensive monitoring to your pipelines. Set up dashboards, alerts, and runbooks. Practice incident response scenarios.",
-          "order": 3
+          "order": 4
         },
         {
           "id": "leadership-communication",
@@ -1546,12 +2177,12 @@
             }
           ],
           "attachments": [],
-          "why": "Senior roles require more than technical skills. You need to influence decisions, communicate complex ideas clearly, and help others grow.",
+          "why": "Senior roles require more than technical skills. Job postings emphasize stakeholder communication, collaboration with business teams, and documentation skills.",
           "how": "Write an RFC for a project you're working on. Practice explaining technical concepts to non-technical stakeholders. Mentor someone junior.",
-          "order": 4
+          "order": 5
         }
       ]
     }
   ],
-  "lastUpdated": "2025-12-22T11:34:30.888Z"
+  "lastUpdated": "2025-12-23T10:00:00.000Z"
 }
